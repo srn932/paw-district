@@ -4,9 +4,9 @@ import { Logo } from "@/components/common/logo";
 import { business, displayBusiness } from "@/config/business";
 
 const columns = [
-  { title: "Explore", links: [["About", "/about"], ["Services", "/services"], ["Membership", "/membership"], ["Journal", "/blog"], ["FAQs", "/faq"]] },
-  { title: "Services", links: [["Grooming", "/services/grooming"], ["Daycare", "/services/daycare"], ["Boarding", "/services/boarding"], ["Wellness", "/services/wellness"]] },
-  { title: "Visit", links: [["Contact", "/contact"], ["Book appointment", "/book"], ["Location", "/contact#location"], ["Opening hours", "/contact#hours"]] },
+  { title: "Explore", links: [["Our District", "/about"], ["Why Paw District", "/why-paw-district"], ["Membership", "/membership"], ["Journal", "/blog"], ["FAQs", "/faq"]] },
+  { title: "Pet care", links: [["Boarding", "/services/boarding"], ["Grooming", "/services/grooming"], ["Training", "/services/training"]] },
+  { title: "Find us", links: [["Visit the District", "/visit"], ["Map & directions", "/visit#location"], ["Opening hours", "/visit#hours"]] },
   { title: "Legal", links: [["Privacy", "/privacy"], ["Terms", "/terms"]] },
 ];
 

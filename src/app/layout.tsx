@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: { default: "Paw District | Modern Pet Care", template: "%s | Paw District" },
   description: siteConfig.description,
   applicationName: "Paw District",
-  keywords: ["pet care", "pet grooming", "dog daycare", "pet boarding", "pet wellness", "professional pet grooming"],
+  keywords: ["pet boarding Chennai", "dog boarding", "cat boarding", "pet grooming Chennai", "dog grooming", "cat grooming", "dog training Chennai", "puppy training"],
   robots: { index: true, follow: true },
   manifest: "/manifest.webmanifest",
 };

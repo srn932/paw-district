@@ -2,7 +2,7 @@
 
 A production-quality, responsive pet-care website built with Next.js App Router, TypeScript, Tailwind CSS, Motion, React Hook Form and Zod.
 
-The design is a warm, premium light-theme experience for grooming, daycare, boarding, wellness and related pet-care services. All routes, forms, navigation, SEO endpoints and responsive states are implemented.
+The design is a warm, premium light-theme experience focused on boarding, grooming and training. All routes, enquiry forms, navigation, SEO endpoints and responsive states are implemented.
 
 ## Running locally
 
@@ -31,22 +31,15 @@ npm run lint
 
 - `/` — Home
 - `/about` — About Paw District
-- `/services` — Services overview
-- `/services/grooming`
-- `/services/daycare`
 - `/services/boarding`
-- `/services/wellness`
-- `/services/spa`
-- `/services/vet-consultations`
-- `/services/puppy-care`
-- `/services/senior-support`
+- `/services/grooming`
+- `/services/training`
 - `/membership`
 - `/why-paw-district`
 - `/testimonials`
 - `/blog` and `/blog/[slug]`
 - `/faq`
-- `/contact`
-- `/book`
+- `/visit`
 - `/privacy`
 - `/terms`
 - Custom 404, route error and loading states
@@ -68,7 +61,7 @@ Editable site content:
 - `src/data/faqs.ts` — grouped FAQs
 - `src/data/blog.ts` — journal articles
 
-The business city is intentionally blank. Once configured, the metadata helper adds it naturally to page descriptions for local SEO.
+The verified Chennai contact details and map coordinates live in `src/config/business.ts`; the metadata helper uses the city naturally for local SEO.
 
 ## Placeholder content that must be replaced
 
@@ -81,7 +74,7 @@ The following data is deliberately labelled as placeholder or sample content in 
 - Team profiles
 - Before/after grooming images
 - General pet photography
-- Business address, phone, WhatsApp, email, opening hours and social links
+- Opening hours and social links
 - Draft legal policy details
 
 Do not publish fictional reviews, figures, team members, prices or operating claims as verified facts.
@@ -97,15 +90,15 @@ Before production:
 3. Remove `unoptimized: true` from `next.config.ts` to restore the optimized image pipeline.
 4. Confirm descriptive alt text still matches each final image.
 
-## Forms
+## Enquiries
 
-The contact and booking forms include client-side Zod validation, accessible labels and errors, loading states and polished success states.
+The enquiry form includes client-side Zod validation, accessible labels and errors, loading states and a polished success state.
 
 Current development submission flow:
 
 - `src/lib/forms/submit-lead.ts` validates the architecture with a simulated async response.
 - No email, database, CRM, WhatsApp message or webhook is sent.
-- Booking requests do not reserve a real appointment.
+- An enquiry does not reserve an appointment or stay.
 
 For production, add server-only adapters under `src/lib/integrations/` and call them from a Route Handler or Server Action. Keep provider credentials in server environment variables. Do not move secrets into client components.
 
@@ -117,7 +110,7 @@ Copy `.env.example` to `.env.local` and add the number in international format w
 NEXT_PUBLIC_WHATSAPP_NUMBER=91XXXXXXXXXX
 ```
 
-If no number is configured, WhatsApp actions safely lead to the contact page instead of opening a broken `wa.me` URL.
+If no number is configured, WhatsApp actions safely lead to the Visit the District page instead of opening a broken `wa.me` URL.
 
 ## Chatbot
 
@@ -141,9 +134,9 @@ Implemented:
 - `robots.txt`
 - Web app manifest and SVG favicon
 - Semantic heading and article structure
-- Internal linking across services, journal, FAQs and booking
+- Internal linking across boarding, grooming, training, the journal, FAQs and visit information
 
-Complete `src/config/business.ts` before launch so local schema and page descriptions contain verified information.
+Confirm the remaining opening hours and social profiles in `src/config/business.ts` before launch.
 
 ## Motion and 3D
 

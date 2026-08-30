@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Menu, MessageCircle, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Logo } from "@/components/common/logo";
+import { business } from "@/config/business";
 import { siteConfig, whatsappUrl } from "@/config/site";
 
 export function Navbar() {
@@ -23,14 +24,14 @@ export function Navbar() {
         </nav>
         <div className="flex items-center gap-2">
           <Link href={whatsappUrl()} className="hidden h-11 w-11 items-center justify-center rounded-full border border-ink/15 transition hover:bg-mint sm:flex" aria-label="Chat with Paw District on WhatsApp"><MessageCircle className="h-4 w-4" /></Link>
-          <Link href="/book" className="btn-primary hidden lg:inline-flex">Book a visit</Link>
+          <Link href={`tel:${business.phone}`} className="btn-primary hidden lg:inline-flex">Call the District</Link>
           <button onClick={() => setOpen(!open)} className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 bg-ivory lg:hidden" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open}>{open ? <X /> : <Menu />}</button>
         </div>
       </div>
       <div className={`fixed inset-0 top-20 z-40 bg-cream transition duration-500 lg:hidden ${open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-4 opacity-0"}`}>
         <nav className="container-shell flex h-full flex-col overflow-y-auto py-10" aria-label="Mobile navigation">
           {siteConfig.navigation.map((item, index) => <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="border-b border-ink/10 py-4 text-3xl font-bold tracking-[-.04em]"><span className="mr-4 text-xs text-muted">0{index + 1}</span>{item.label}</Link>)}
-          <div className="mt-8 flex flex-col gap-3"><Link href="/book" onClick={() => setOpen(false)} className="btn-primary">Book a visit</Link><Link href={whatsappUrl()} onClick={() => setOpen(false)} className="btn-outline">Chat on WhatsApp</Link></div>
+          <div className="mt-8 flex flex-col gap-3"><Link href={`tel:${business.phone}`} onClick={() => setOpen(false)} className="btn-primary">Call the District</Link><Link href={whatsappUrl()} onClick={() => setOpen(false)} className="btn-outline">Chat on WhatsApp</Link></div>
         </nav>
       </div>
     </header>

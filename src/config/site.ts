@@ -4,21 +4,20 @@ export const siteConfig = {
   name: business.name,
   tagline: "Everything your pet needs. One happy district.",
   description:
-    "Thoughtful grooming, daycare, boarding and everyday wellness in one warm, pet-first place.",
+    "Thoughtful pet boarding, professional grooming and practical dog training in one warm, pet-first place in Chennai.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   navigation: [
     { label: "Our District", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Grooming", href: "/services/grooming" },
-    { label: "Daycare", href: "/services/daycare" },
     { label: "Boarding", href: "/services/boarding" },
-    { label: "Wellness", href: "/services/wellness" },
+    { label: "Grooming", href: "/services/grooming" },
+    { label: "Training", href: "/services/training" },
+    { label: "Membership", href: "/membership" },
     { label: "Journal", href: "/blog" },
-    { label: "Contact", href: "/contact" },
+    { label: "Visit the District", href: "/visit" },
   ],
 } as const;
 
-export function whatsappUrl(message = "Hi Paw District, I'd like to know more about your pet care services.") {
+export function whatsappUrl(message = "Hi Paw District, I'd like to know more about boarding, grooming or training.") {
   const number = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || business.whatsapp;
-  return number ? `https://wa.me/${number.replace(/\D/g, "")}?text=${encodeURIComponent(message)}` : "/contact";
+  return number ? `https://wa.me/${number.replace(/\D/g, "")}?text=${encodeURIComponent(message)}` : "/visit";
 }

@@ -1,30 +1,32 @@
 export const faqGroups: { category: string; items: { question: string; answer: string }[] }[] = [
   { category: "General", items: [
-    { question: "Do I need an appointment?", answer: "Appointments help us plan the right team, space and time for your pet. Contact us first for same-day availability." },
-    { question: "What vaccinations are required?", answer: "Requirements vary by service, age and local veterinary guidance. We will share the current checklist before your visit; your veterinarian should confirm what is appropriate for your pet." },
-    { question: "What happens if my pet becomes unwell?", answer: "We contact you promptly, follow the agreed emergency plan and seek qualified veterinary care when needed." },
+    { question: "Do I need an appointment?", answer: "Calling or messaging first helps us plan the right team, space and time for your pet. Speak with us for current availability." },
+    { question: "Where is The Paw District?", answer: "You will find us at No. 20/4A1A3, Mappedu Road, Alapakkam - Nedunkundram, Chennai, Tamil Nadu 600063." },
+    { question: "What vaccinations are required?", answer: "Requirements vary by activity, age and veterinary guidance. We share the current checklist before your pet joins us; your veterinarian should confirm what is appropriate." },
+    { question: "What happens if my pet becomes unwell?", answer: "We call you promptly, follow the agreed emergency plan and seek qualified veterinary care when needed." },
+  ]},
+  { category: "Boarding", items: [
+    { question: "Do you offer care during the day?", answer: "Yes. Supervised daytime care is included within Boarding rather than treated as a separate programme. It balances play, enrichment, meals when needed and rest." },
+    { question: "How do you introduce new dogs?", answer: "Through calm observation and controlled introductions. We consider play style, energy, confidence and boundaries before choosing companions." },
+    { question: "What should I bring for an overnight stay?", answer: "Bring labelled food, medication, written care notes and one safe comfort item. We confirm the final checklist before arrival." },
+    { question: "Can you follow my pet's feeding schedule?", answer: "Yes. Share portions, timing and preparation details clearly before the stay." },
+    { question: "Will I receive updates?", answer: "Yes. Updates focus on meals, mood, play and rest so you know how the stay is going." },
+    { question: "Can senior pets stay?", answer: "Often, yes—but suitability depends on mobility, medication, stress and health needs. We review this before confirming care." },
   ]},
   { category: "Grooming", items: [
     { question: "How often should my dog be groomed?", answer: "Coat type, shedding, lifestyle and skin needs all matter. Many dogs visit every four to eight weeks, but we suggest a rhythm after meeting your pet." },
     { question: "Do you groom cats?", answer: "Yes, with appointments planned around feline comfort and handling needs." },
+    { question: "Can I request a particular haircut?", answer: "Yes. Bring a reference if you have one and we will explain what is practical for the current coat condition and comfort." },
   ]},
-  { category: "Daycare", items: [
-    { question: "How do you introduce new dogs to daycare?", answer: "Through a calm assessment and controlled introductions. We look at play style, confidence and boundaries before choosing a group." },
-    { question: "Does daycare include rest?", answer: "Yes. Good daycare includes proper downtime, not non-stop stimulation." },
+  { category: "Training", items: [
+    { question: "What age can training begin?", answer: "Gentle foundations can begin early. The setting and exercises should match age, confidence, vaccination guidance and previous experience." },
+    { question: "Do you offer puppy training?", answer: "Yes. Puppy foundations can include settling, handling, lead introductions, recall, name response and everyday home routines." },
+    { question: "Can training fix every behaviour?", answer: "No outcome can be responsibly guaranteed. Progress depends on the dog, health, history, environment and consistent practice at home." },
+    { question: "Will I learn how to practise at home?", answer: "Yes. Pet-parent coaching is central to the programme so cues and routines remain consistent outside the District." },
   ]},
-  { category: "Boarding", items: [
-    { question: "What should I bring for boarding?", answer: "Bring labelled food, medication, written instructions and one safe comfort item. We confirm the final checklist before arrival." },
-    { question: "Can you follow my pet's feeding schedule?", answer: "Yes. Share portions, times and preparation details clearly at booking." },
-    { question: "Will I receive updates during boarding?", answer: "Yes. Updates focus on mood, meals, rest and useful moments from the day." },
-    { question: "Can senior pets stay at Paw District?", answer: "Often, yes—but suitability depends on mobility, medication, stress and health needs. We review this before confirming a stay." },
-  ]},
-  { category: "Wellness", items: [
-    { question: "Do wellness visits replace my veterinarian?", answer: "No. Wellness support does not replace diagnosis or treatment from a qualified veterinarian." },
-    { question: "Can you help with puppy and kitten routines?", answer: "Yes. We can help you think through care routines and prepare useful questions for your veterinarian." },
-  ]},
-  { category: "Bookings", items: [
-    { question: "Can I change my booking?", answer: "Yes, subject to availability. Contact us as early as possible so we can find a better time." },
-    { question: "How will my appointment be confirmed?", answer: "A booking request is confirmed only after the Paw District team contacts you. Submitting the website form does not reserve a slot automatically." },
+  { category: "Membership", items: [
+    { question: "Are membership plans final?", answer: "Not yet. Current plan names and benefits are development placeholders until The Paw District approves its membership offer." },
+    { question: "How can I ask about membership?", answer: "Call +91 73389 00239, message us on WhatsApp or use the form on the Visit the District page." },
   ]},
 ];
 

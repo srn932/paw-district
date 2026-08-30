@@ -1,5 +1,5 @@
 export type LeadPayload = {
-  type: "contact" | "booking";
+  type: "enquiry";
   [key: string]: unknown;
 };
 
