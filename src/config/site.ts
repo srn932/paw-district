@@ -5,7 +5,7 @@ export const siteConfig = {
   tagline: "Everything your pet needs. One happy district.",
   description:
     "Thoughtful pet boarding, professional grooming and practical dog training in one warm, pet-first place in Chennai.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.thepawdistrict.in",
   navigation: [
     { label: "Our District", href: "/about" },
     { label: "Boarding", href: "/services/boarding" },
