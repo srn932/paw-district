@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function Mark({ className = "h-9 w-9" }: { className?: string }) {
@@ -15,8 +16,10 @@ export function Mark({ className = "h-9 w-9" }: { className?: string }) {
 
 export function Logo({ light = false }: { light?: boolean }) {
   return (
-    <Link href="/" className="inline-flex items-center gap-3 rounded-lg focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-leaf/30" aria-label="Paw District home">
-      <span className="h-12 w-12 shrink-0 rounded-2xl border border-ink/10 bg-white bg-[url('/images/paw-district-logo.jpg')] bg-[length:185%] bg-[position:50%_3%] bg-no-repeat shadow-sm" aria-hidden="true" />
+    <Link href="/" className="inline-flex items-center gap-3 rounded-lg focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-leaf/30" aria-label="The Paw District home">
+      <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-sm" aria-hidden="true">
+        <Image src="/images/paw-district-mark.webp" alt="" fill sizes="48px" className="object-cover" />
+      </span>
       <span className={`text-sm font-extrabold uppercase leading-[.9] tracking-[.12em] ${light ? "text-white" : "text-ink"}`}><span className="text-[9px] font-bold tracking-[.2em] opacity-65">The</span><br />Paw District</span>
     </Link>
   );

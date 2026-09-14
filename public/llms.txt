@@ -1,36 +1,31 @@
 # The Paw District
 
-> The Paw District is a pet care destination in Chennai offering professional dog boarding, grooming, dog training and membership-based pet care services.
-
-The Paw District provides thoughtful, practical and pet-first services designed to support dogs and their families.
+> The Paw District is a pet-care destination in Chennai offering pet boarding, professional grooming and practical dog training.
 
 Official website: https://www.thepawdistrict.in
 
-## Main Pages
+## Main pages
 
-- [Home](https://www.thepawdistrict.in/): Overview of The Paw District and its pet care services.
-- [About](https://www.thepawdistrict.in/about): Learn more about The Paw District.
-- [Why Paw District](https://www.thepawdistrict.in/why-paw-district): Learn about The Paw District's approach to pet care.
-- [Membership](https://www.thepawdistrict.in/membership): Membership information and benefits.
-- [Testimonials](https://www.thepawdistrict.in/testimonials): Experiences shared by customers.
+- [Home](https://www.thepawdistrict.in/): Overview of The Paw District and its pet-care services.
+- [About](https://www.thepawdistrict.in/about): The business's approach and care standards.
+- [Why Paw District](https://www.thepawdistrict.in/why-paw-district): What pet parents can expect.
+- [Regular care](https://www.thepawdistrict.in/membership): How to discuss recurring care needs.
 - [FAQ](https://www.thepawdistrict.in/faq): Frequently asked questions.
-- [Visit](https://www.thepawdistrict.in/visit): Visit and contact information.
+- [Visit](https://www.thepawdistrict.in/visit): Verified contact information, address and directions.
 
 ## Services
 
-- [Dog Boarding](https://www.thepawdistrict.in/services/boarding): Professional boarding and supervised care for dogs.
-- [Dog Grooming](https://www.thepawdistrict.in/services/grooming): Professional grooming services for dogs.
-- [Dog Training](https://www.thepawdistrict.in/services/training): Practical dog training and behaviour support.
+- [Pet boarding](https://www.thepawdistrict.in/services/boarding): Overnight and daytime boarding information.
+- [Pet grooming](https://www.thepawdistrict.in/services/grooming): Dog and cat grooming information.
+- [Dog training](https://www.thepawdistrict.in/services/training): Practical training and pet-parent coaching.
 
 ## Resources
 
-- [Journal](https://www.thepawdistrict.in/blog): Articles and information about pet care, dogs, grooming and training.
-- [Sitemap](https://www.thepawdistrict.in/sitemap.xml): XML sitemap containing discoverable website pages.
+- [Journal](https://www.thepawdistrict.in/blog): General pet-care articles.
+- [Privacy policy](https://www.thepawdistrict.in/privacy): Website data and analytics information.
+- [Terms](https://www.thepawdistrict.in/terms): Website and enquiry terms.
+- [Sitemap](https://www.thepawdistrict.in/sitemap.xml): Discoverable website pages.
 
 ## Location
 
-The Paw District is located in Chennai, Tamil Nadu, India.
-
-## Official Domain
-
-https://www.thepawdistrict.in
+No. 20/4A1A3, Mappedu Road, Alapakkam - Nedunkundram, Chennai, Tamil Nadu 600063, India.

@@ -24,9 +24,9 @@ export const faqGroups: { category: string; items: { question: string; answer: s
     { question: "Can training fix every behaviour?", answer: "No outcome can be responsibly guaranteed. Progress depends on the dog, health, history, environment and consistent practice at home." },
     { question: "Will I learn how to practise at home?", answer: "Yes. Pet-parent coaching is central to the programme so cues and routines remain consistent outside the District." },
   ]},
-  { category: "Membership", items: [
-    { question: "Are membership plans final?", answer: "Not yet. Current plan names and benefits are development placeholders until The Paw District approves its membership offer." },
-    { question: "How can I ask about membership?", answer: "Call +91 73389 00239, message us on WhatsApp or use the form on the Visit the District page." },
+  { category: "Regular care", items: [
+    { question: "Do I need a membership to use Paw District?", answer: "No. You can contact us about boarding, grooming or training whenever you need help." },
+    { question: "How can I ask about regular care?", answer: "Call +91 73389 00239, message us on WhatsApp or use the enquiry form on the Visit the District page." },
   ]},
 ];
 

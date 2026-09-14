@@ -1,12 +1,104 @@
-import { Check } from "lucide-react";
-import { PageHero } from "@/components/common/page-hero";
+import { CalendarCheck2, MessagesSquare, PawPrint } from "lucide-react";
 import { ButtonLink } from "@/components/common/button";
 import { FAQAccordion } from "@/components/common/faq-accordion";
+import { PageHero } from "@/components/common/page-hero";
 import { Reveal } from "@/components/motion/reveal";
 import { CTASection } from "@/components/sections/cta-section";
 import { pageMetadata } from "@/config/seo";
-import { membershipPlans } from "@/data/membership";
 
-export const metadata=pageMetadata("Pet Care Membership","Explore editable Paw District membership plans for regular grooming, boarding and training benefits","/membership");
-const faqs=[{question:"Are these final plans and prices?",answer:"No. The plans, benefits and pricing structure are clearly marked as placeholders until Paw District approves the real membership offer."},{question:"Will membership guarantee a slot?",answer:"The final scheduling rules are still to be confirmed. Membership should not be presented as guaranteed availability unless the operating policy supports that promise."},{question:"Can I use benefits across pets?",answer:"This will depend on the approved membership terms. Ask the team when real plan details are published."}];
-export default function MembershipPage(){return <><PageHero eyebrow="For the regulars" title="For pets who practically have their own seat here." copy="A simpler rhythm for grooming, boarding and training—with benefits that feel useful, not noisy." breadcrumbs={[{label:"Membership"}]} accent="bg-peach" /><section className="container-shell section-pad"><p className="mb-8 rounded-2xl bg-sun/45 p-4 text-center text-xs font-bold uppercase tracking-[.12em] text-amber-900">Development placeholders · all prices and benefits need business approval</p><div className="grid gap-6 lg:grid-cols-3">{membershipPlans.map((plan,index)=><Reveal key={plan.name} delay={index*.07} className={`relative flex flex-col rounded-5xl border p-7 md:p-9 ${plan.featured?"border-forest bg-forest text-white shadow-soft":"border-ink/10 bg-white"}`}>{plan.featured&&<span className="absolute right-6 top-6 rounded-full bg-sun px-3 py-1 text-[9px] font-extrabold uppercase tracking-widest text-ink">Sample popular</span>}<p className={`text-[10px] font-extrabold uppercase tracking-[.18em] ${plan.featured?"text-mint":"text-forest"}`}>{plan.name}</p><p className="mt-8 text-3xl font-bold tracking-[-.05em]">{plan.price}</p><p className={`mt-4 leading-7 ${plan.featured?"text-white/65":"text-muted"}`}>{plan.description}</p><ul className={`my-8 space-y-4 border-y py-8 ${plan.featured?"border-white/15":"border-ink/10"}`}>{plan.features.map(item=><li key={item} className="flex gap-3 text-sm font-semibold"><Check className={`h-4 w-4 shrink-0 ${plan.featured?"text-sun":"text-forest"}`}/>{item}</li>)}</ul><ButtonLink href="/visit" variant={plan.featured?"light":"primary"} className="mt-auto">Ask about this plan</ButtonLink></Reveal>)}</div></section><section className="container-shell pb-20 md:pb-28"><div className="grid gap-12 lg:grid-cols-[.7fr_1.3fr]"><Reveal><p className="eyebrow">Membership FAQs</p><h2 className="headline">Worth knowing.</h2></Reveal><Reveal delay={.1}><FAQAccordion items={faqs}/></Reveal></div></section><CTASection title="Build a care rhythm that fits." copy="Ask about regular care now, and we will share the approved membership details when they are ready."/></>}
+export const metadata = pageMetadata(
+  "Regular Pet Care in Chennai",
+  "Talk to Paw District about a practical routine for repeat grooming, boarding or dog training in Chennai",
+  "/membership",
+);
+
+const steps = [
+  {
+    icon: PawPrint,
+    title: "Tell us about your pet",
+    copy: "Share their routine, temperament, care history and the services you are considering.",
+  },
+  {
+    icon: MessagesSquare,
+    title: "Discuss a suitable rhythm",
+    copy: "We will talk through frequency, comfort, availability and what makes sense for your pet.",
+  },
+  {
+    icon: CalendarCheck2,
+    title: "Confirm each booking",
+    copy: "Services, dates and prices are always confirmed directly before care begins.",
+  },
+];
+
+const faqs = [
+  {
+    question: "Do I need a membership to use Paw District?",
+    answer:
+      "No. You can contact us about boarding, grooming or training whenever you need help.",
+  },
+  {
+    question: "Can you recommend a regular care schedule?",
+    answer:
+      "Yes. The right schedule depends on your pet, their coat, routine, temperament and the service involved. We will discuss it with you before suggesting a plan.",
+  },
+  {
+    question: "Are bookings automatically guaranteed?",
+    answer:
+      "No. Every booking is confirmed directly after we check availability and make sure the requested care is suitable.",
+  },
+];
+
+export default function MembershipPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="For regular visitors"
+        title="A simpler rhythm for ongoing pet care."
+        copy="Keep grooming, boarding and training conversations in one familiar place—with every recommendation shaped around your pet."
+        breadcrumbs={[{ label: "Regular care" }]}
+        accent="bg-peach"
+      />
+
+      <section className="container-shell section-pad">
+        <div className="grid gap-6 lg:grid-cols-3">
+          {steps.map(({ icon: Icon, title, copy }) => (
+            <Reveal key={title} className="rounded-4xl border border-ink/10 p-7 md:p-9">
+              <Icon className="h-7 w-7 text-forest" aria-hidden="true" />
+              <h2 className="mt-10 text-2xl font-bold tracking-[-.04em]">{title}</h2>
+              <p className="mt-4 leading-7 text-muted">{copy}</p>
+            </Reveal>
+          ))}
+        </div>
+
+        <div className="mt-12 rounded-4xl bg-mint p-7 md:p-10">
+          <h2 className="text-3xl font-bold tracking-[-.04em]">Start with a conversation.</h2>
+          <p className="mt-4 max-w-3xl leading-7 text-muted">
+            Tell us which services you use, how often you need them and what helps
+            your pet feel comfortable. We will share the current options,
+            availability and pricing directly.
+          </p>
+          <ButtonLink href="/visit" className="mt-7">
+            Ask about regular care
+          </ButtonLink>
+        </div>
+      </section>
+
+      <section className="container-shell pb-20 md:pb-28">
+        <div className="grid gap-12 lg:grid-cols-[.7fr_1.3fr]">
+          <Reveal>
+            <p className="eyebrow">Regular care FAQs</p>
+            <h2 className="headline">Worth knowing.</h2>
+          </Reveal>
+          <Reveal>
+            <FAQAccordion items={faqs} />
+          </Reveal>
+        </div>
+      </section>
+
+      <CTASection
+        title="Build a care rhythm that fits."
+        copy="Tell us about your pet and we will help you plan the next step."
+      />
+    </>
+  );
+}

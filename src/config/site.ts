@@ -11,7 +11,7 @@ export const siteConfig = {
     { label: "Boarding", href: "/services/boarding" },
     { label: "Grooming", href: "/services/grooming" },
     { label: "Training", href: "/services/training" },
-    { label: "Membership", href: "/membership" },
+    { label: "Regular Care", href: "/membership" },
     { label: "Journal", href: "/blog" },
     { label: "Visit the District", href: "/visit" },
   ],

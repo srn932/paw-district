@@ -20,5 +20,5 @@ export const displayBusiness = {
   phone: business.phone,
   email: business.email,
   address: `${business.address}, ${business.city}, ${business.state} ${business.postalCode}`,
-  hours: business.openingHours.length ? business.openingHours : ["Opening hours coming soon"],
+  hours: business.openingHours.length ? business.openingHours : ["Please call or WhatsApp before visiting"],
 };

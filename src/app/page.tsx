@@ -8,10 +8,6 @@ import { TrustMarquee } from "@/components/common/marquee";
 import { Reveal } from "@/components/motion/reveal";
 import { PremiumHeroVisual } from "@/components/common/premium-hero-visual";
 import { featuredServices } from "@/data/services";
-import { AnimatedCounter } from "@/components/common/animated-counter";
-import { stats } from "@/data/stats";
-import { TestimonialStrip } from "@/components/common/testimonial-strip";
-import { BeforeAfterSlider } from "@/components/common/before-after-slider";
 import { blogPosts } from "@/data/blog";
 import { CTASection } from "@/components/sections/cta-section";
 import { SEOJsonLd } from "@/components/common/seo-json-ld";
@@ -60,11 +56,6 @@ export default function HomePage() {
           "@type": "WebSite",
           name: "Paw District",
           url: siteConfig.url,
-          potentialAction: {
-            "@type": "SearchAction",
-            target: `${siteConfig.url}/blog?q={search_term_string}`,
-            "query-input": "required name=search_term_string",
-          },
         }}
       />
 
@@ -237,7 +228,7 @@ export default function HomePage() {
               delay={index * 0.08}
               className="group rounded-4xl border border-ink/10 p-7 transition hover:bg-mint md:p-9"
             >
-              <span className="text-xs font-extrabold tracking-[.18em] text-leaf">
+              <span className="text-xs font-extrabold tracking-[.18em] text-forest">
                 STEP {number}
               </span>
 
@@ -292,188 +283,18 @@ export default function HomePage() {
       </section>
 
       <section className="container-shell section-pad">
-        <Reveal>
-          <SectionHeading
-            eyebrow="05 · Inside"
-            title="Life inside the District."
-            copy="Designed for movement, stillness, curious noses and the very serious business of napping."
-          />
-        </Reveal>
-
-        <div className="mt-14 grid auto-rows-[220px] grid-cols-1 gap-5 md:grid-cols-3">
-          {[
-            [
-              "Play, with a plan",
-              "https://images.unsplash.com/photo-1551730459-92db2a308d6a?auto=format&fit=crop&w=1200&q=85",
-              "md:col-span-2 md:row-span-2",
-              "50% 44%",
-            ],
-            [
-              "Quiet corners",
-              "https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=900&q=85",
-              "",
-              "50% 38%",
-            ],
-            [
-              "Fresh stations",
-              "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=900&q=85",
-              "",
-              "50% 40%",
-            ],
-            [
-              "Room to snooze",
-              "https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=900&q=85",
-              "",
-              "50% 35%",
-            ],
-            [
-              "Updates from their day",
-              "https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=900&q=85",
-              "md:col-span-2",
-              "50% 42%",
-            ],
-          ].map(([title, image, span, position], index) => (
-            <Reveal
-              key={title}
-              className={`group relative overflow-hidden rounded-4xl ${span}`}
-              delay={index * 0.05}
-            >
-              <Image
-                src={image}
-                alt={`${title} at a premium pet-care space`}
-                fill
-                sizes="(max-width:768px) 100vw, 66vw"
-                style={{ objectPosition: position }}
-                className="object-cover transition duration-700 group-hover:scale-105"
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/75 via-transparent to-transparent" />
-
-              <p className="absolute bottom-6 left-6 text-xl font-bold text-white">
-                {title}
-              </p>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      <section className="bg-mint py-16 md:py-24">
-        <div className="container-shell">
-          <p className="mb-10 text-center text-[10px] font-extrabold uppercase tracking-[.2em] text-forest">
-            Placeholder metrics · replace before launch
-          </p>
-
-          <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <p className="text-4xl font-extrabold tracking-[-.06em] md:text-6xl">
-                  <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-                </p>
-
-                <p className="mt-3 text-[10px] font-extrabold uppercase tracking-[.17em] text-forest">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="container-shell section-pad">
-        <Reveal>
-          <SectionHeading
-            eyebrow="06 · Word on the street"
-            title="Heard around the District."
-            copy="Sample review layout shown for development. Verified pet-parent words will live here before launch."
-          />
-        </Reveal>
-
-        <div className="mt-12">
-          <TestimonialStrip />
-        </div>
-
-        <ButtonLink
-          href="/testimonials"
-          variant="outline"
-          className="mt-5"
-        >
-          Read all stories
-        </ButtonLink>
-      </section>
-
-      <section className="bg-cream section-pad">
-        <div className="container-shell grid gap-12 lg:grid-cols-2 lg:items-center">
+        <div className="overflow-hidden rounded-5xl bg-peach p-8 md:p-14 lg:p-16">
           <Reveal>
-            <BeforeAfterSlider />
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <p className="eyebrow">07 · Grooming glow-up</p>
-            <h2 className="headline">From scruffy to selfie-ready.</h2>
-
-            <p className="body-lg mt-6">
-              Drag to compare a relevant same-dog grooming transformation. This
-              representative sample should be replaced with a verified Paw
-              District result—with pet-parent permission—before launch.
+            <p className="eyebrow">Regular care</p>
+            <h2 className="headline">One team. One familiar conversation.</h2>
+            <p className="body-lg mt-6 max-w-3xl text-ink/80">
+              If your pet needs grooming, boarding or training more than once,
+              tell us about their routine. We will discuss suitable options and
+              confirm every booking directly with you.
             </p>
-
-            <ButtonLink href="/services/grooming" className="mt-8">
-              See the grooming menu
-            </ButtonLink>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="container-shell section-pad">
-        <div className="grid overflow-hidden rounded-5xl bg-peach lg:grid-cols-2">
-          <Reveal className="p-8 md:p-14 lg:p-16">
-            <p className="eyebrow">Membership</p>
-
-            <h2 className="headline">
-              Regular care.
-              <br />
-              Better value.
-            </h2>
-
-            <p className="body-lg mt-6 text-ink/65">
-              For pets who practically have their own seat at Paw District.
-            </p>
-
-            <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-              {[
-                "Preferred scheduling",
-                "Grooming savings",
-                "Boarding benefits",
-                "Training benefits",
-                "Birthday surprises",
-                "Member-only offers",
-              ].map((item) => (
-                <li
-                  key={item}
-                  className="flex items-center gap-3 text-sm font-semibold"
-                >
-                  <Check className="h-4 w-4 text-forest" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-
             <ButtonLink href="/membership" className="mt-9">
-              Explore membership
+              Ask about regular care
             </ButtonLink>
-          </Reveal>
-
-          <Reveal
-            className="relative min-h-[380px] overflow-hidden"
-            delay={0.1}
-          >
-            <Image
-              src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=1200&q=85"
-              alt="Relaxed dog enjoying regular Paw District care"
-              fill
-              sizes="(max-width:1024px) 100vw, 50vw"
-              className="object-cover object-[center_42%]"
-            />
           </Reveal>
         </div>
       </section>
@@ -483,7 +304,7 @@ export default function HomePage() {
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <Reveal>
               <SectionHeading
-                eyebrow="08 · The journal"
+                eyebrow="05 · The journal"
                 title="Notes from the District."
               />
             </Reveal>
