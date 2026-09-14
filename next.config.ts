@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+   htmlLimitedBots: /.*/,
   images: {
     // Development imagery is remote placeholder content. This avoids requiring the
     // local Next.js server to fetch third-party images in restricted environments.
