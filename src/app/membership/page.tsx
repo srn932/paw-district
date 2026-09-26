@@ -41,7 +41,7 @@ const benefits = [
 
 const steps = [
   ["01", "Choose your fit", "Start with the plan closest to the care your pet uses most."],
-  ["02", "Tell us about them", "We will confirm suitability, current benefits and final pricing with you."],
+  ["02", "Tell us about them", "We will confirm suitability, current benefits and pricing offers with you."],
   ["03", "Make the District familiar", "Book care as needed and enjoy the benefits included in your active plan."],
 ];
 
@@ -52,11 +52,6 @@ const faqs = [
       "Not at all. Boarding, grooming and training remain available without membership. Membership is simply for pet parents who want more value and a familiar rhythm across repeat visits.",
   },
   {
-    question: "Are the prices shown final?",
-    answer:
-      "The membership structure is ready, but launch pricing is still being finalised. Speak with the Paw District team for the current price and inclusions before joining.",
-  },
-  {
     question: "Does membership guarantee a booking?",
     answer:
       "No. All bookings remain subject to availability and suitability for the pet and requested service. Some plans may include a preferred request window, but every visit is confirmed directly.",
@@ -64,7 +59,7 @@ const faqs = [
   {
     question: "Can one plan cover more than one pet?",
     answer:
-      "Multi-pet rules will be confirmed with the final membership terms. Tell us about your pets and we will help you find the most sensible option.",
+      "Multi-pet rules will be confirmed after consultation. Tell us about your pets and we will help you find the most sensible option.",
   },
   {
     question: "Can I change or cancel my plan?",
