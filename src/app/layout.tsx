@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { MobileActionBar } from "@/components/layout/mobile-action-bar";
 import { WhatsAppButton } from "@/components/common/whatsapp-button";
 import { SEOJsonLd } from "@/components/common/seo-json-ld";
-import { AnalyticsConsent } from "@/components/common/analytics-consent";
 import { business } from "@/config/business";
 import { siteConfig } from "@/config/site";
 
@@ -30,8 +30,25 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   const mapUrl = `https://www.google.com/maps/search/?api=1&query=${business.latitude},${business.longitude}`;
   return (
     <html lang="en">
+      <head>
+        <Script
+          id="google-tag-manager"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NJ7TMB8F');",
+          }}
+        />
+      </head>
       <body>
-        <AnalyticsConsent />
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NJ7TMB8F"
+            height="0"
+            width="0"
+            className="hidden"
+            title="Google Tag Manager"
+          />
+        </noscript>
         <a className="skip-link" href="#main-content">Skip to main content</a>
         <SEOJsonLd
           data={{

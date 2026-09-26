@@ -19,8 +19,8 @@ const sections = [
     copy: "If you send an enquiry by WhatsApp, phone or email, we use the information to respond, understand your pet's needs, discuss availability and plan any care you choose to book. Please share only health or behaviour details relevant to the requested care. This website is not an emergency or veterinary diagnostic service.",
   },
   {
-    title: "Analytics choices",
-    copy: "We use Google Tag Manager to operate Google Analytics only after you select Accept analytics. Analytics may process information such as pages viewed, approximate location derived from an IP address, device or browser information and interaction data. If you decline, the analytics tag is not loaded. Your choice is saved in your browser's local storage and can be changed using Cookie settings in the footer.",
+    title: "Analytics",
+    copy: "We use Google Tag Manager and Google Analytics to understand how the website is found and used. These services may process information such as pages viewed, approximate location derived from an IP address, device or browser information and interaction data. You can limit analytics through your browser's privacy controls or Google's available opt-out tools.",
   },
   {
     title: "Hosting and technical records",
@@ -42,7 +42,7 @@ export default function PrivacyPage() {
       <PageHero eyebrow="Legal" title="Privacy, in plain language." copy="What this website collects, which services it uses and the choices available to you." breadcrumbs={[{ label: "Privacy policy" }]} accent="bg-mint" />
       <article className="container-shell pb-24">
         <div className="mx-auto max-w-3xl">
-          <p className="mb-12 text-sm font-bold uppercase tracking-[.12em] text-forest">Last updated 15 September 2026</p>
+          <p className="mb-12 text-sm font-bold uppercase tracking-[.12em] text-forest">Last updated 26 September 2026</p>
           {sections.map((section) => <section key={section.title} className="mb-10"><h2 className="text-2xl font-bold tracking-[-.035em]">{section.title}</h2><p className="mt-4 text-lg leading-8 text-muted">{section.copy}</p></section>)}
           <section className="mb-10" id="service-policies">
             <h2 className="text-2xl font-bold tracking-[-.035em]">Service-provider policies</h2>

@@ -8,7 +8,7 @@ Production website for [The Paw District](https://www.thepawdistrict.in), a pet-
 - React 19 and TypeScript
 - Tailwind CSS
 - Vercel hosting
-- Google Tag Manager, loaded only after analytics consent
+- Google Tag Manager with a published Google Analytics 4 tag
 
 ## Local development
 
@@ -51,7 +51,7 @@ Only publish verified operating hours, social profiles, prices or customer revie
 
 ## Analytics and enquiries
 
-The GTM container is preserved in `src/components/common/analytics-consent.tsx`. It is not requested until a visitor accepts optional analytics. Visitors can reopen their choice from **Cookie settings** in the footer.
+The GTM container `GTM-NJ7TMB8F` loads from the root layout and publishes the Google Analytics 4 tag `G-HY2SJ60YT4`. Keep the container and measurement IDs aligned with the production Google accounts when changing analytics configuration.
 
 The website enquiry form validates input in the browser and opens a pre-filled WhatsApp message. It does not claim to submit data to a backend or database.
 

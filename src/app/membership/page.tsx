@@ -1,50 +1,75 @@
-import { CalendarCheck2, MessagesSquare, PawPrint } from "lucide-react";
+import {
+  BadgePercent,
+  CalendarCheck2,
+  Check,
+  Gift,
+  HeartHandshake,
+  PawPrint,
+  Sparkles,
+} from "lucide-react";
 import { ButtonLink } from "@/components/common/button";
 import { FAQAccordion } from "@/components/common/faq-accordion";
 import { PageHero } from "@/components/common/page-hero";
 import { Reveal } from "@/components/motion/reveal";
 import { CTASection } from "@/components/sections/cta-section";
 import { pageMetadata } from "@/config/seo";
+import { membershipPlans } from "@/data/membership";
 
 export const metadata = pageMetadata(
-  "Regular Pet Care in Chennai",
-  "Talk to Paw District about a practical routine for repeat grooming, boarding or dog training in Chennai",
+  "Pet Care Membership in Chennai",
+  "Explore Paw District membership for useful grooming, boarding and training benefits, member value and a more familiar care routine",
   "/membership",
 );
 
-const steps = [
+const benefits = [
   {
-    icon: PawPrint,
-    title: "Tell us about your pet",
-    copy: "Share their routine, temperament, care history and the services you are considering.",
-  },
-  {
-    icon: MessagesSquare,
-    title: "Discuss a suitable rhythm",
-    copy: "We will talk through frequency, comfort, availability and what makes sense for your pet.",
+    icon: BadgePercent,
+    title: "Value that feels useful",
+    copy: "Member benefits are built around the care pets actually return for—not a long list of things nobody uses.",
   },
   {
     icon: CalendarCheck2,
-    title: "Confirm each booking",
-    copy: "Services, dates and prices are always confirmed directly before care begins.",
+    title: "Planning feels easier",
+    copy: "Request regular visits with one team that already knows your pet, their routine and the useful little details.",
   },
+  {
+    icon: HeartHandshake,
+    title: "Familiarity grows",
+    copy: "More visits with familiar people can mean calmer handovers, better context and fewer repeated explanations.",
+  },
+];
+
+const steps = [
+  ["01", "Choose your fit", "Start with the plan closest to the care your pet uses most."],
+  ["02", "Tell us about them", "We will confirm suitability, current benefits and final pricing with you."],
+  ["03", "Make the District familiar", "Book care as needed and enjoy the benefits included in your active plan."],
 ];
 
 const faqs = [
   {
     question: "Do I need a membership to use Paw District?",
     answer:
-      "No. You can contact us about boarding, grooming or training whenever you need help.",
+      "Not at all. Boarding, grooming and training remain available without membership. Membership is simply for pet parents who want more value and a familiar rhythm across repeat visits.",
   },
   {
-    question: "Can you recommend a regular care schedule?",
+    question: "Are the prices shown final?",
     answer:
-      "Yes. The right schedule depends on your pet, their coat, routine, temperament and the service involved. We will discuss it with you before suggesting a plan.",
+      "The membership structure is ready, but launch pricing is still being finalised. Speak with the Paw District team for the current price and inclusions before joining.",
   },
   {
-    question: "Are bookings automatically guaranteed?",
+    question: "Does membership guarantee a booking?",
     answer:
-      "No. Every booking is confirmed directly after we check availability and make sure the requested care is suitable.",
+      "No. All bookings remain subject to availability and suitability for the pet and requested service. Some plans may include a preferred request window, but every visit is confirmed directly.",
+  },
+  {
+    question: "Can one plan cover more than one pet?",
+    answer:
+      "Multi-pet rules will be confirmed with the final membership terms. Tell us about your pets and we will help you find the most sensible option.",
+  },
+  {
+    question: "Can I change or cancel my plan?",
+    answer:
+      "Yes, subject to the final billing and notice terms shared before you join. There will be no surprises: the applicable rules will be clear before payment.",
   },
 ];
 
@@ -52,52 +77,164 @@ export default function MembershipPage() {
   return (
     <>
       <PageHero
-        eyebrow="For regular visitors"
-        title="A simpler rhythm for ongoing pet care."
-        copy="Keep grooming, boarding and training conversations in one familiar place—with every recommendation shaped around your pet."
-        breadcrumbs={[{ label: "Regular care" }]}
+        eyebrow="Paw District membership"
+        title="More familiar care. More value in every visit."
+        copy="For pets who keep coming back—and pet parents who like having grooming, boarding and training benefits in one happy place."
+        breadcrumbs={[{ label: "Membership" }]}
         accent="bg-peach"
       />
 
       <section className="container-shell section-pad">
-        <div className="grid gap-6 lg:grid-cols-3">
-          {steps.map(({ icon: Icon, title, copy }) => (
-            <Reveal key={title} className="rounded-4xl border border-ink/10 p-7 md:p-9">
-              <Icon className="h-7 w-7 text-forest" aria-hidden="true" />
-              <h2 className="mt-10 text-2xl font-bold tracking-[-.04em]">{title}</h2>
+        <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
+          <Reveal>
+            <p className="eyebrow">Why join</p>
+            <h2 className="headline">The perks of being a regular.</h2>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <p className="body-lg max-w-2xl">
+              Membership is designed to make repeat care feel simpler, warmer
+              and better value—while keeping every recommendation centred on
+              the pet in front of us.
+            </p>
+          </Reveal>
+        </div>
+
+        <div className="mt-14 grid gap-px overflow-hidden rounded-5xl bg-ink/10 lg:grid-cols-3">
+          {benefits.map(({ icon: Icon, title, copy }, index) => (
+            <Reveal key={title} delay={index * 0.06} className="bg-ivory p-7 md:p-10">
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-mint text-forest">
+                <Icon className="h-5 w-5" aria-hidden="true" />
+              </span>
+              <h3 className="mt-10 text-2xl font-bold tracking-[-.04em]">{title}</h3>
               <p className="mt-4 leading-7 text-muted">{copy}</p>
             </Reveal>
           ))}
         </div>
+      </section>
 
-        <div className="mt-12 rounded-4xl bg-mint p-7 md:p-10">
-          <h2 className="text-3xl font-bold tracking-[-.04em]">Start with a conversation.</h2>
-          <p className="mt-4 max-w-3xl leading-7 text-muted">
-            Tell us which services you use, how often you need them and what helps
-            your pet feel comfortable. We will share the current options,
-            availability and pricing directly.
-          </p>
-          <ButtonLink href="/visit" className="mt-7">
-            Ask about regular care
-          </ButtonLink>
+      <section className="bg-cream section-pad">
+        <div className="container-shell">
+          <Reveal>
+            <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+              <div>
+                <p className="eyebrow">Choose your membership</p>
+                <h2 className="headline">A plan for every kind of regular.</h2>
+              </div>
+              <p className="max-w-md text-sm leading-6 text-muted">
+                Launch pricing is being finalised. Ask us for current pricing,
+                eligibility and the confirmed benefit list before joining.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="mt-14 grid gap-6 lg:grid-cols-3">
+            {membershipPlans.map((plan, index) => (
+              <Reveal
+                key={plan.name}
+                delay={index * 0.07}
+                className={`relative flex flex-col rounded-5xl border p-7 md:p-9 ${plan.featured ? "border-forest bg-forest text-white shadow-soft" : "border-ink/10 bg-ivory"}`}
+              >
+                {plan.featured ? (
+                  <span className="absolute right-6 top-6 rounded-full bg-sun px-3 py-1 text-[9px] font-extrabold uppercase tracking-widest text-ink">
+                    Most popular
+                  </span>
+                ) : null}
+                <p className={`text-[10px] font-extrabold uppercase tracking-[.18em] ${plan.featured ? "text-mint" : "text-forest"}`}>
+                  {plan.eyebrow}
+                </p>
+                <h3 className="mt-4 text-3xl font-bold tracking-[-.05em]">{plan.name}</h3>
+                <div className="mt-8 flex items-end gap-2">
+                  <span className="text-5xl font-extrabold tracking-[-.06em]">{plan.price}</span>
+                  <span className={`pb-1 text-sm ${plan.featured ? "text-white/60" : "text-muted"}`}>{plan.cadence}</span>
+                </div>
+                <p className={`mt-5 leading-7 ${plan.featured ? "text-white/70" : "text-muted"}`}>
+                  {plan.description}
+                </p>
+                <ul className={`my-8 space-y-4 border-y py-8 ${plan.featured ? "border-white/15" : "border-ink/10"}`}>
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="flex gap-3 text-sm font-semibold">
+                      <Check className={`mt-0.5 h-4 w-4 shrink-0 ${plan.featured ? "text-sun" : "text-forest"}`} aria-hidden="true" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <ButtonLink href="/visit" variant={plan.featured ? "light" : "primary"} className="mt-auto">
+                  Ask about {plan.name}
+                </ButtonLink>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="container-shell pb-20 md:pb-28">
+      <section className="container-shell section-pad">
         <div className="grid gap-12 lg:grid-cols-[.7fr_1.3fr]">
           <Reveal>
-            <p className="eyebrow">Regular care FAQs</p>
+            <div className="lg:sticky lg:top-32">
+              <p className="eyebrow">How it works</p>
+              <h2 className="headline">Three steps. Zero fuss.</h2>
+              <PawPrint className="mt-10 h-10 w-10 text-leaf" aria-hidden="true" />
+            </div>
+          </Reveal>
+          <div className="grid gap-4">
+            {steps.map(([number, title, copy], index) => (
+              <Reveal
+                key={number}
+                delay={index * 0.06}
+                className="grid gap-6 rounded-4xl border border-ink/10 p-7 sm:grid-cols-[auto_1fr] sm:items-start md:p-9"
+              >
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-peach text-xs font-extrabold text-forest">
+                  {number}
+                </span>
+                <div>
+                  <h3 className="text-2xl font-bold tracking-[-.04em]">{title}</h3>
+                  <p className="mt-3 leading-7 text-muted">{copy}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-ink text-white section-pad">
+        <div className="container-shell grid gap-10 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
+          <Reveal>
+            <p className="eyebrow !text-mint">A little extra happiness</p>
+            <h2 className="headline">Because loyalty deserves a wag back.</h2>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
+              Useful savings, thoughtful extras and one team that gets to know
+              your pet better over time. That is the whole idea.
+            </p>
+            <ButtonLink href="/visit" variant="light" className="mt-8">
+              Ask about membership
+            </ButtonLink>
+          </Reveal>
+          <Reveal delay={0.08} className="relative overflow-hidden rounded-5xl bg-mint p-8 text-ink md:p-12">
+            <Sparkles className="h-8 w-8 text-forest" aria-hidden="true" />
+            <p className="mt-16 text-3xl font-bold leading-tight tracking-[-.04em]">
+              Member benefits across grooming, boarding and training—all under
+              one familiar roof.
+            </p>
+            <Gift className="absolute -bottom-8 -right-6 h-40 w-40 rotate-[-10deg] text-forest opacity-10" aria-hidden="true" />
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="container-shell section-pad">
+        <div className="grid gap-12 lg:grid-cols-[.7fr_1.3fr]">
+          <Reveal>
+            <p className="eyebrow">Membership FAQs</p>
             <h2 className="headline">Worth knowing.</h2>
           </Reveal>
-          <Reveal>
+          <Reveal delay={0.08}>
             <FAQAccordion items={faqs} />
           </Reveal>
         </div>
       </section>
 
       <CTASection
-        title="Build a care rhythm that fits."
-        copy="Tell us about your pet and we will help you plan the next step."
+        title="Ready to become a District regular?"
+        copy="Tell us about your pet, the care they use and the plan that caught your eye. We will take it from there."
       />
     </>
   );

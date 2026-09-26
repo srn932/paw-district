@@ -283,18 +283,40 @@ export default function HomePage() {
       </section>
 
       <section className="container-shell section-pad">
-        <div className="overflow-hidden rounded-5xl bg-peach p-8 md:p-14 lg:p-16">
-          <Reveal>
-            <p className="eyebrow">Regular care</p>
-            <h2 className="headline">One team. One familiar conversation.</h2>
-            <p className="body-lg mt-6 max-w-3xl text-ink/80">
-              If your pet needs grooming, boarding or training more than once,
-              tell us about their routine. We will discuss suitable options and
-              confirm every booking directly with you.
+        <div className="grid overflow-hidden rounded-5xl bg-peach lg:grid-cols-[1.15fr_.85fr]">
+          <Reveal className="p-8 md:p-14 lg:p-16">
+            <p className="eyebrow">Paw District membership</p>
+            <h2 className="headline">The perks of being a regular.</h2>
+            <p className="body-lg mt-6 max-w-2xl text-ink/80">
+              Useful value on grooming, boarding and training—plus the ease of
+              coming back to one team that already knows the little things.
             </p>
             <ButtonLink href="/membership" className="mt-9">
-              Ask about regular care
+              Explore membership
             </ButtonLink>
+          </Reveal>
+          <Reveal delay={0.08} className="bg-forest p-8 text-white md:p-12 lg:p-14">
+            <p className="text-[10px] font-extrabold uppercase tracking-[.2em] text-mint">
+              Made for familiar faces
+            </p>
+            <ul className="mt-10 space-y-5">
+              {[
+                "Member value across everyday care",
+                "Preferred booking requests",
+                "Seasonal offers and thoughtful extras",
+                "Plans shaped around how often they visit",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-4 border-b border-white/15 pb-5 text-lg font-semibold last:border-0">
+                  <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-sun text-ink">
+                    <Check className="h-3.5 w-3.5" aria-hidden="true" />
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-8 text-sm leading-6 text-white/60">
+              Pricing is being finalised. Ask us for the current plan details.
+            </p>
           </Reveal>
         </div>
       </section>

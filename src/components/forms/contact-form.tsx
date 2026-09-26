@@ -115,7 +115,7 @@ export function EnquiryForm() {
             <option>Boarding</option>
             <option>Grooming</option>
             <option>Training</option>
-            <option>Regular care</option>
+            <option>Membership</option>
             <option>Something else</option>
           </select>
         </Field>
