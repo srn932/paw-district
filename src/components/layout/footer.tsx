@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, PawPrint } from "lucide-react";
-import { ButtonLink } from "@/components/common/button";
+import { ArrowUpRight } from "lucide-react";
 import { Logo, Mark } from "@/components/common/logo";
 import { Reveal } from "@/components/motion/reveal";
 import { business, displayBusiness } from "@/config/business";
@@ -19,30 +18,6 @@ export function Footer() {
     <footer className="relative overflow-hidden bg-ink pb-28 pt-16 text-cream md:pb-10 lg:pt-20">
       <Mark className="footer-mark pointer-events-none absolute -right-24 top-24 h-[34rem] w-[34rem] text-white opacity-[.025]" aria-hidden="true" />
       <div className="container-shell relative">
-        <Reveal variant="clip">
-          <div className="mb-20 grid overflow-hidden rounded-5xl border border-white/15 bg-white/[.055] lg:grid-cols-[1.2fr_.8fr]">
-            <div className="p-8 md:p-12 lg:p-14">
-              <p className="eyebrow !text-mint">The gate is open</p>
-              <h2 className="max-w-4xl text-4xl font-bold leading-[.98] tracking-[-.055em] md:text-6xl">
-                Come by curious.<br />Leave with a wag.
-              </h2>
-              <p className="mt-6 max-w-xl text-lg leading-8 text-white/70">
-                Tell us about your pet and the kind of day you are planning. We
-                will help you find the right corner of the District.
-              </p>
-              <ButtonLink href="/visit" variant="light" className="mt-8">Plan a visit</ButtonLink>
-            </div>
-            <div className="footer-paw-grid relative flex min-h-72 items-center justify-center border-t border-white/15 bg-mint text-ink lg:border-l lg:border-t-0">
-              <span className="footer-paw-orbit flex h-36 w-36 items-center justify-center rounded-full border border-forest/20 bg-ivory/60">
-                <PawPrint className="h-14 w-14 text-forest" aria-hidden="true" />
-              </span>
-              <p className="absolute bottom-7 text-[10px] font-extrabold uppercase tracking-[.2em] text-forest">
-                Boarding · Grooming · Training
-              </p>
-            </div>
-          </div>
-        </Reveal>
-
         <div className="grid gap-14 border-b border-white/15 pb-16 lg:grid-cols-[1.4fr_2fr]">
           <Reveal>
             <div>

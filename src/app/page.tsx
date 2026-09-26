@@ -10,6 +10,7 @@ import { PremiumHeroVisual } from "@/components/common/premium-hero-visual";
 import { featuredServices } from "@/data/services";
 import { blogPosts } from "@/data/blog";
 import { CTASection } from "@/components/sections/cta-section";
+import { HomeMembership } from "@/components/sections/home-membership";
 import { SEOJsonLd } from "@/components/common/seo-json-ld";
 import { pageMetadata } from "@/config/seo";
 import { siteConfig } from "@/config/site";
@@ -138,19 +139,19 @@ export default function HomePage() {
         </div>
 
         <div className="mt-14 grid gap-5 md:grid-cols-[1.3fr_.7fr]">
-          <Reveal className="relative min-h-[420px] overflow-hidden rounded-5xl">
+          <Reveal className="group relative min-h-[420px] overflow-hidden rounded-5xl">
             <Image
               src="https://images.unsplash.com/photo-1527526029430-319f10814151?auto=format&fit=crop&w=1800&q=85"
               alt="Pet parent sharing a warm moment with a dog"
               fill
               sizes="(max-width: 768px) 100vw, 65vw"
-              className="object-cover object-[center_46%]"
+              className="object-cover object-[center_46%] transition-transform duration-1000 ease-out group-hover:scale-[1.035]"
             />
           </Reveal>
 
           <div className="grid gap-5">
             <Reveal
-              className="relative min-h-52 overflow-hidden rounded-4xl bg-peach"
+              className="group relative min-h-52 overflow-hidden rounded-4xl bg-peach"
               delay={0.1}
             >
               <Image
@@ -158,16 +159,16 @@ export default function HomePage() {
                 alt="Relaxed cat in warm daylight"
                 fill
                 sizes="(max-width: 768px) 100vw, 35vw"
-                className="object-cover object-[center_38%]"
+                className="object-cover object-[center_38%] transition-transform duration-1000 ease-out group-hover:scale-105"
               />
             </Reveal>
 
             <Reveal
-              className="flex min-h-52 items-end rounded-4xl bg-sun p-7"
+              className="group flex min-h-52 items-end rounded-4xl bg-sun p-7 transition-transform duration-500 hover:-translate-y-1 hover:rotate-[.4deg]"
               delay={0.15}
             >
               <div>
-                <Sparkles className="mb-8 h-7 w-7" />
+                <Sparkles className="mb-8 h-7 w-7 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110" />
                 <p className="text-2xl font-bold leading-tight tracking-[-.03em]">
                   Good days start with a wag.
                 </p>
@@ -226,7 +227,7 @@ export default function HomePage() {
             <Reveal
               key={number}
               delay={index * 0.08}
-              className="group rounded-4xl border border-ink/10 p-7 transition hover:bg-mint md:p-9"
+              className="group rounded-4xl border border-ink/10 p-7 transition-all duration-500 hover:-translate-y-2 hover:rotate-[.35deg] hover:bg-mint hover:shadow-soft md:p-9"
             >
               <span className="text-xs font-extrabold tracking-[.18em] text-forest">
                 STEP {number}
@@ -264,9 +265,9 @@ export default function HomePage() {
                 <Reveal
                   key={title}
                   delay={index * 0.04}
-                  className="bg-ink p-7 md:p-9"
+                  className="group bg-ink p-7 transition-colors duration-500 hover:bg-[#20362d] md:p-9"
                 >
-                  <span className="mb-10 flex h-9 w-9 items-center justify-center rounded-full bg-white/10">
+                  <span className="mb-10 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110">
                     <Check className="h-4 w-4 text-mint" />
                   </span>
 
@@ -282,44 +283,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-shell section-pad">
-        <div className="grid overflow-hidden rounded-5xl bg-peach lg:grid-cols-[1.15fr_.85fr]">
-          <Reveal className="p-8 md:p-14 lg:p-16">
-            <p className="eyebrow">Paw District membership</p>
-            <h2 className="headline">The perks of being a regular.</h2>
-            <p className="body-lg mt-6 max-w-2xl text-ink/80">
-              Useful value on grooming, boarding and training—plus the ease of
-              coming back to one team that already knows the little things.
-            </p>
-            <ButtonLink href="/membership" className="mt-9">
-              Explore membership
-            </ButtonLink>
-          </Reveal>
-          <Reveal delay={0.08} className="bg-forest p-8 text-white md:p-12 lg:p-14">
-            <p className="text-[10px] font-extrabold uppercase tracking-[.2em] text-mint">
-              Made for familiar faces
-            </p>
-            <ul className="mt-10 space-y-5">
-              {[
-                "Member value across everyday care",
-                "Preferred booking requests",
-                "Seasonal offers and thoughtful extras",
-                "Plans shaped around how often they visit",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-4 border-b border-white/15 pb-5 text-lg font-semibold last:border-0">
-                  <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-sun text-ink">
-                    <Check className="h-3.5 w-3.5" aria-hidden="true" />
-                  </span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className="mt-8 text-sm leading-6 text-white/60">
-              Pricing is being finalised. Ask us for the current plan details.
-            </p>
-          </Reveal>
-        </div>
-      </section>
+      <HomeMembership />
 
       <section className="bg-cream section-pad">
         <div className="container-shell">

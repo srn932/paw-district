@@ -56,13 +56,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .group:hover .image-zoom-subtle { transform: scale(1.035); }
 .footer-link { transition: color .3s ease, transform .3s var(--ease); }
 .footer-link:hover { color: white; transform: translateX(3px); }
-.footer-paw-grid {
+.membership-grid {
   background-image:
-    radial-gradient(circle at center, rgba(49,91,70,.12) 0 2px, transparent 2.5px),
-    linear-gradient(135deg, rgba(255,255,255,.25), transparent);
-  background-size: 24px 24px, 100% 100%;
+    radial-gradient(circle at center, rgba(255,255,255,.07) 0 1.5px, transparent 2px),
+    linear-gradient(120deg, rgba(111,157,124,.08), transparent 45%);
+  background-size: 28px 28px, 100% 100%;
 }
-
 .clip-rounded { clip-path: inset(0 round 2rem); }
 .paw-grid {
   background-image: radial-gradient(circle at center, rgba(49,91,70,.085) 0 3px, transparent 3.5px);
@@ -84,8 +83,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .loader-paw { animation: pulse-soft 1s ease-in-out infinite; }
 @keyframes footer-drift { 50% { transform: translate3d(-18px, 14px, 0) rotate(4deg); } }
 .footer-mark { animation: footer-drift 12s ease-in-out infinite; }
-@keyframes paw-orbit { 50% { transform: translateY(-8px) rotate(-4deg); box-shadow: 0 24px 60px rgba(23,37,31,.14); } }
-.footer-paw-orbit { animation: paw-orbit 5.5s ease-in-out infinite; }
 
 @media (pointer: fine) {
   body { cursor: url("/cursors/paw-default.svg") 7 7, auto; }
