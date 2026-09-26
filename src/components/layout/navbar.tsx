@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, MessageCircle, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Logo } from "@/components/common/logo";
 import { business } from "@/config/business";
@@ -35,7 +35,6 @@ export function Navbar() {
           {siteConfig.navigation.map((item) => <Link key={item.href} href={item.href} aria-current={pathname === item.href ? "page" : undefined} className={`text-[11px] font-extrabold uppercase tracking-[.11em] transition hover:text-forest ${pathname === item.href ? "text-forest" : "text-ink/75"}`}>{item.label}</Link>)}
         </nav>
         <div className="flex items-center gap-2">
-          <Link href={whatsappUrl()} className="hidden h-11 w-11 items-center justify-center rounded-full border border-ink/15 transition hover:bg-mint sm:flex" aria-label="Chat with Paw District on WhatsApp"><MessageCircle className="h-4 w-4" /></Link>
           <Link href={`tel:${business.phone}`} className="btn-primary hidden lg:inline-flex">Call the District</Link>
           <button ref={menuButtonRef} type="button" onClick={() => setOpen(!open)} className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 bg-ivory lg:hidden" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation">{open ? <X /> : <Menu />}</button>
         </div>

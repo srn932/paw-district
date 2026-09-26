@@ -49,6 +49,20 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .error { @apply mt-1 text-sm text-red-700; }
 }
 
+.btn:active { transform: translateY(1px) scale(.97); transition-duration: 120ms; }
+.button-label { transition: transform .3s var(--ease); }
+.btn:hover .button-label { transform: translateX(-2px); }
+.image-zoom-subtle { transition: transform 1.1s var(--ease); }
+.group:hover .image-zoom-subtle { transform: scale(1.035); }
+.footer-link { transition: color .3s ease, transform .3s var(--ease); }
+.footer-link:hover { color: white; transform: translateX(3px); }
+.footer-paw-grid {
+  background-image:
+    radial-gradient(circle at center, rgba(49,91,70,.12) 0 2px, transparent 2.5px),
+    linear-gradient(135deg, rgba(255,255,255,.25), transparent);
+  background-size: 24px 24px, 100% 100%;
+}
+
 .clip-rounded { clip-path: inset(0 round 2rem); }
 .paw-grid {
   background-image: radial-gradient(circle at center, rgba(49,91,70,.085) 0 3px, transparent 3.5px);
@@ -68,6 +82,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .floaty { animation: float 5s ease-in-out infinite; }
 @keyframes pulse-soft { 50% { opacity: .55; transform: scale(.96); } }
 .loader-paw { animation: pulse-soft 1s ease-in-out infinite; }
+@keyframes footer-drift { 50% { transform: translate3d(-18px, 14px, 0) rotate(4deg); } }
+.footer-mark { animation: footer-drift 12s ease-in-out infinite; }
+@keyframes paw-orbit { 50% { transform: translateY(-8px) rotate(-4deg); box-shadow: 0 24px 60px rgba(23,37,31,.14); } }
+.footer-paw-orbit { animation: paw-orbit 5.5s ease-in-out infinite; }
+
+@media (pointer: fine) {
+  body { cursor: url("/cursors/paw-default.svg") 7 7, auto; }
+  a, button, select, summary, [role="button"] { cursor: url("/cursors/paw-pointer.svg") 8 7, pointer; }
+  input, textarea { cursor: text; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

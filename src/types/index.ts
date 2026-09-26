@@ -7,6 +7,7 @@ export type Service = {
   description: string;
   color: string;
   image: string;
+  imageAlt: string;
   imagePosition?: string;
   features: string[];
   flow: { title: string; text: string }[];
@@ -21,6 +22,8 @@ export type BlogPost = {
   date: string;
   readingTime: string;
   image: string;
+  imageAlt: string;
+  seoTitle: string;
   intro: string;
   sections: { heading: string; body: string[] }[];
 };

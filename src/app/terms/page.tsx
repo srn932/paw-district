@@ -2,7 +2,7 @@ import { PageHero } from "@/components/common/page-hero";
 import { business, displayBusiness } from "@/config/business";
 import { pageMetadata } from "@/config/seo";
 
-export const metadata = pageMetadata("Terms & Conditions", "Website and pet-care enquiry terms for The Paw District", "/terms");
+export const metadata = pageMetadata("Terms & Conditions | Paw District", "Website, enquiry and pet-care service terms for Paw District customers in Chennai", "/terms");
 
 const sections = [
   ["Website use", "This website provides general information about Paw District's services and ways to contact us. It does not provide emergency, veterinary or medical advice. Please contact a qualified veterinarian for medical concerns and the appropriate emergency service for urgent situations."],

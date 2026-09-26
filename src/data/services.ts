@@ -10,6 +10,7 @@ export const services: Service[] = [
     description: "Thoughtful dog and cat boarding in Chennai, including supervised daytime care, feeding routines, play, rest and clear pet-parent updates.",
     color: "bg-mint",
     image: "https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?auto=format&fit=crop&w=1600&q=85",
+    imageAlt: "Golden retriever resting comfortably during a dog boarding stay",
     imagePosition: "50% 46%",
     features: ["Overnight boarding", "Supervised day boarding", "Comfortable suites", "Familiar feeding routines", "Balanced play & rest", "Medication notes", "Photo updates", "Gentle first-day introductions"],
     flow: [
@@ -34,6 +35,7 @@ export const services: Service[] = [
     description: "Professional dog and cat grooming in Chennai, from bath-and-brush care to coat-specific trims, de-shedding and gentle spa add-ons.",
     color: "bg-peach",
     image: "https://images.unsplash.com/photo-1599443015574-be5fe8a05783?auto=format&fit=crop&w=1600&q=85",
+    imageAlt: "Small dog receiving a gentle professional grooming session",
     imagePosition: "50% 38%",
     features: ["Dog grooming", "Cat grooming", "Bath & brush", "Haircut & trim", "Nail care", "Ear cleaning", "De-shedding", "Coat-specific care & spa add-ons"],
     flow: [
@@ -56,6 +58,7 @@ export const services: Service[] = [
     description: "Professional dog training in Chennai for puppy foundations, obedience, leash skills, recall, social confidence and pet-parent coaching.",
     color: "bg-sun",
     image: "https://images.unsplash.com/photo-1551730459-92db2a308d6a?auto=format&fit=crop&w=1600&q=85",
+    imageAlt: "Dog following a trainer during an outdoor training exercise",
     imagePosition: "50% 44%",
     features: ["Puppy foundations", "Basic obedience", "Leash skills", "Recall practice", "Social confidence", "One-to-one guidance", "Pet-parent coaching", "Everyday behaviour support"],
     flow: [

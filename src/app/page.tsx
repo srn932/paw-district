@@ -15,8 +15,8 @@ import { pageMetadata } from "@/config/seo";
 import { siteConfig } from "@/config/site";
 
 export const metadata = pageMetadata(
-  "Paw District | Pet Boarding, Grooming & Dog Training in Chennai",
-  "Thoughtful pet boarding, professional grooming and practical dog training in one happy district",
+  "Pet Boarding, Grooming & Training Chennai | Paw District",
+  "Pet boarding, dog and cat grooming, and practical dog training at Paw District in Chennai. Thoughtful care in one familiar place",
   "/"
 );
 
@@ -343,7 +343,7 @@ export default function HomePage() {
                   <div className="relative aspect-[4/3] overflow-hidden rounded-4xl bg-mint/30">
                     <Image
                       src={post.image}
-                      alt={post.title}
+                      alt={post.imageAlt}
                       fill
                       sizes="(max-width:768px) 100vw, 33vw"
                       className="object-cover object-[center_38%] transition duration-700 group-hover:scale-105"

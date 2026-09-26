@@ -7,7 +7,7 @@ import { business, displayBusiness } from "@/config/business";
 import { pageMetadata } from "@/config/seo";
 import { whatsappUrl } from "@/config/site";
 
-export const metadata=pageMetadata("Visit The Paw District in Chennai","Find The Paw District on Mappedu Road, Alapakkam - Nedunkundram, or speak with us about boarding, grooming, training and membership","/visit");
+export const metadata=pageMetadata("Contact Paw District Chennai | Visit & Directions","Find Paw District in Alapakkam, Chennai. Get directions or contact us about pet boarding, grooming, dog training and membership","/visit");
 
 const directionsUrl=`https://www.google.com/maps/dir/?api=1&destination=${business.latitude},${business.longitude}`;
 const info=[

@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/footer";
 import { MobileActionBar } from "@/components/layout/mobile-action-bar";
 import { WhatsAppButton } from "@/components/common/whatsapp-button";
 import { SEOJsonLd } from "@/components/common/seo-json-ld";
+import { ScrollProgress } from "@/components/motion/scroll-progress";
 import { business } from "@/config/business";
 import { siteConfig } from "@/config/site";
 
@@ -49,6 +50,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             title="Google Tag Manager"
           />
         </noscript>
+        <ScrollProgress />
         <a className="skip-link" href="#main-content">Skip to main content</a>
         <SEOJsonLd
           data={{

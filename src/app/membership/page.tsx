@@ -16,8 +16,8 @@ import { pageMetadata } from "@/config/seo";
 import { membershipPlans } from "@/data/membership";
 
 export const metadata = pageMetadata(
-  "Pet Care Membership in Chennai",
-  "Explore Paw District membership for useful grooming, boarding and training benefits, member value and a more familiar care routine",
+  "Pet Care Membership Chennai | Paw District",
+  "Explore Paw District membership in Chennai for grooming, boarding and training benefits, member value and a more familiar care routine",
   "/membership",
 );
 

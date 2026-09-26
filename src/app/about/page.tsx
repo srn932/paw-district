@@ -7,8 +7,8 @@ import { CTASection } from "@/components/sections/cta-section";
 import { pageMetadata } from "@/config/seo";
 
 export const metadata = pageMetadata(
-  "About Paw District",
-  "Learn how Paw District brings thoughtful boarding, grooming and dog training together in one familiar place in Chennai",
+  "About Paw District | Pet Care in Chennai",
+  "Meet Paw District, a Chennai pet-care team bringing thoughtful boarding, professional grooming and practical dog training together",
   "/about",
 );
 
@@ -29,6 +29,7 @@ export default function AboutPage() {
         title="The kind of place we would want for our own pets."
         copy="One familiar place for thoughtful boarding, grooming and training—and people who notice what each pet needs."
         image="https://images.unsplash.com/photo-1601758174114-e711c0cbaa69?auto=format&fit=crop&w=1400&q=80"
+        imageAlt="Pet-care professional sharing a calm moment with a dog"
         imagePosition="50% 42%"
         breadcrumbs={[{ label: "About" }]}
         accent="bg-peach"
@@ -57,7 +58,7 @@ export default function AboutPage() {
           <Reveal className="relative min-h-[500px] overflow-hidden rounded-5xl">
             <Image
               src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1200&q=80"
-              alt="Dog and cat relaxing together"
+              alt="Dog and cat resting together in a calm pet-care space"
               fill
               sizes="(max-width:1024px) 100vw, 50vw"
               className="object-cover object-[center_42%]"

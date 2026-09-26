@@ -4,8 +4,8 @@ import { business } from "@/config/business";
 import { pageMetadata } from "@/config/seo";
 
 export const metadata = pageMetadata(
-  "Privacy Policy",
-  "How The Paw District handles website enquiries, analytics choices and third-party services",
+  "Privacy Policy | Paw District",
+  "How Paw District handles website enquiries, Google Analytics and third-party services for visitors in Chennai",
   "/privacy",
 );
 
