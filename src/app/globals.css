@@ -75,14 +75,19 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 @keyframes marquee { to { transform: translateX(-50%); } }
 .marquee-track { animation: marquee 28s linear infinite; width: max-content; }
-.marquee-track:hover { animation-play-state: paused; }
-.marquee-track:focus-within { animation-play-state: paused; }
 @keyframes float { 50% { transform: translateY(-12px) rotate(2deg); } }
 .floaty { animation: float 5s ease-in-out infinite; }
 @keyframes pulse-soft { 50% { opacity: .55; transform: scale(.96); } }
 .loader-paw { animation: pulse-soft 1s ease-in-out infinite; }
 @keyframes footer-drift { 50% { transform: translate3d(-18px, 14px, 0) rotate(4deg); } }
 .footer-mark { animation: footer-drift 12s ease-in-out infinite; }
+@keyframes whatsapp-pop {
+  0%, 8%, 88%, 100% { opacity: 0; transform: translateY(8px) scale(.94); }
+  14%, 78% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.whatsapp-pop { animation: whatsapp-pop 8s var(--ease) 1.2s infinite; }
+.whatsapp-float:hover .whatsapp-pop,
+.whatsapp-float:focus-visible .whatsapp-pop { animation-play-state: paused; opacity: 1; transform: translateY(0) scale(1); }
 
 @media (pointer: fine) {
   body { cursor: url("/cursors/paw-default.svg") 7 7, auto; }

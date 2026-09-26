@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarHeart, Check, PawPrint, Scissors, Sparkles } from "lucide-react";
+import { CalendarHeart, PawPrint, Scissors, Sparkles } from "lucide-react";
 import { motion, useMotionValue, useReducedMotion, useSpring, useTransform } from "motion/react";
 import { ButtonLink } from "@/components/common/button";
 import { Reveal } from "@/components/motion/reveal";
@@ -105,12 +105,6 @@ export function HomeMembership() {
                   ))}
                 </div>
 
-                <div className="relative mt-5 flex items-center gap-3 rounded-2xl bg-ink px-4 py-3 text-xs leading-5 text-white/70 sm:px-5">
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-mint text-forest">
-                    <Check className="h-3.5 w-3.5" aria-hidden="true" />
-                  </span>
-                  Pricing is being finalised. Ask us for current plan details.
-                </div>
               </motion.div>
 
               <motion.span

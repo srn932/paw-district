@@ -12,6 +12,14 @@ import { pageMetadata } from "@/config/seo";
 import { siteConfig } from "@/config/site";
 import { getService, services } from "@/data/services";
 
+const groomingMenu = [
+  ["Bath & brush", "Starts from ₹1,499"],
+  ["Full groom", "Starts from ₹2,499"],
+  ["Cat grooming", "Starts from ₹999"],
+  ["De-shedding", "Starts from ₹1,999"],
+  ["Spa add-ons", "Starts from ₹499"],
+] as const;
+
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
 }
@@ -98,7 +106,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
 
       {service.slug === "grooming" ? (
-        <section className="container-shell section-pad">
+        <section id="grooming-menu" className="container-shell section-pad scroll-mt-24">
           <div className="grid gap-10 lg:grid-cols-2">
             <Reveal>
               <div>
@@ -112,12 +120,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </div>
             </Reveal>
             <Reveal delay={0.1} className="overflow-hidden rounded-4xl border border-ink/10">
-              {["Bath & brush", "Full groom", "Cat grooming", "De-shedding", "Spa add-ons"].map((item) => (
-                <div key={item} className="flex items-center justify-between border-b border-ink/10 bg-white p-5 last:border-0">
+              {groomingMenu.map(([item, price]) => (
+                <div key={item} className="flex flex-col gap-1 border-b border-ink/10 bg-white p-5 last:border-0 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
                   <span className="font-bold">{item}</span>
-                  <span className="text-sm text-muted">Quote after consultation</span>
+                  <span className="text-sm font-semibold text-forest">{price}</span>
                 </div>
               ))}
+              <p className="border-t border-ink/10 bg-cream px-5 py-4 text-xs text-muted">
+                * Prices are inclusive of taxes.
+              </p>
             </Reveal>
           </div>
         </section>

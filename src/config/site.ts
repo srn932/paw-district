@@ -8,12 +8,13 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.thepawdistrict.in",
   navigation: [
     { label: "Our District", href: "/about" },
-    { label: "Boarding", href: "/services/boarding" },
-    { label: "Grooming", href: "/services/grooming" },
-    { label: "Training", href: "/services/training" },
     { label: "Membership", href: "/membership" },
     { label: "Journal", href: "/blog" },
-    { label: "Visit the District", href: "/visit" },
+  ],
+  experienceNavigation: [
+    { label: "Boarding", href: "/services/boarding", copy: "Stay, play and settle in" },
+    { label: "Grooming", href: "/services/grooming", copy: "Coat care with patience" },
+    { label: "Training", href: "/services/training", copy: "Clear cues for real life" },
   ],
 } as const;
 

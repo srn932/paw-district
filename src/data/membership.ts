@@ -1,10 +1,9 @@
-// Pricing remains intentionally editable until Paw District approves its launch offer.
 export const membershipPlans = [
   {
     name: "Companion",
     eyebrow: "A thoughtful start",
-    price: "₹—",
-    cadence: "per month",
+    price: "₹2,499",
+    cadence: "per year",
     description: "For pets who visit often enough to enjoy a few familiar-member extras.",
     features: [
       "Member rates on routine grooming",
@@ -17,8 +16,8 @@ export const membershipPlans = [
   {
     name: "Regular",
     eyebrow: "The happy middle",
-    price: "₹—",
-    cadence: "per month",
+    price: "₹4,999",
+    cadence: "per year",
     description: "For regular grooms, occasional stays and pets who know the team by name.",
     features: [
       "Everything in Companion",
@@ -31,8 +30,8 @@ export const membershipPlans = [
   {
     name: "All-Rounder",
     eyebrow: "Care, all together",
-    price: "₹—",
-    cadence: "per month",
+    price: "₹9,999",
+    cadence: "per year",
     description: "For pets who use more of the District across grooming, boarding and training.",
     features: [
       "Everything in Regular",

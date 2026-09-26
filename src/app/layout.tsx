@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   manifest: "/manifest.webmanifest",
   icons: {
-    icon: "/icon.svg",
+    icon: [{ url: "/images/paw-district-mark.webp", type: "image/webp" }],
     apple: "/images/paw-district-mark.webp",
   },
 };
@@ -28,7 +28,7 @@ export const viewport: Viewport = { themeColor: "#17251F", colorScheme: "light" 
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const address = business.address ? { "@type": "PostalAddress", streetAddress: business.address, addressLocality: business.city, addressRegion: business.state, postalCode: business.postalCode, addressCountry: business.country } : undefined;
-  const mapUrl = `https://www.google.com/maps/search/?api=1&query=${business.latitude},${business.longitude}`;
+  const mapUrl = business.mapUrl;
   return (
     <html lang="en">
       <head>
@@ -71,6 +71,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               longitude: Number(business.longitude),
             },
             hasMap: mapUrl,
+            openingHours: "Mo-Su 08:00-20:00",
             areaServed: { "@type": "City", name: business.city },
             contactPoint: {
               "@type": "ContactPoint",

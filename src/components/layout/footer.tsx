@@ -6,7 +6,7 @@ import { business, displayBusiness } from "@/config/business";
 
 const columns = [
   { title: "Explore", links: [["Our District", "/about"], ["Why Paw District", "/why-paw-district"], ["Membership", "/membership"], ["Journal", "/blog"], ["FAQs", "/faq"]] },
-  { title: "Pet care", links: [["Boarding", "/services/boarding"], ["Grooming", "/services/grooming"], ["Training", "/services/training"]] },
+  { title: "The Paw Experience", links: [["Boarding", "/services/boarding"], ["Grooming", "/services/grooming"], ["Training", "/services/training"]] },
   { title: "Find us", links: [["Visit the District", "/visit"], ["Map & directions", "/visit#location"], ["Opening hours", "/visit#hours"]] },
   { title: "Legal", links: [["Privacy", "/privacy"], ["Terms", "/terms"]] },
 ];

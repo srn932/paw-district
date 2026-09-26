@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, ArrowUpRight, Check, Sparkles } from "lucide-react";
+import { ArrowUpRight, Check, Sparkles } from "lucide-react";
 import { ButtonLink } from "@/components/common/button";
 import { SectionHeading } from "@/components/common/section-heading";
 import { ServiceCard } from "@/components/common/service-card";
@@ -70,6 +70,10 @@ export default function HomePage() {
                 <br />
                 <span className="text-forest">Right in their district.</span>
               </h1>
+              <p className="mt-6 text-xs font-bold uppercase tracking-[.12em] text-muted">
+                Boarding <span className="mx-2 text-leaf">·</span> Grooming{" "}
+                <span className="mx-2 text-leaf">·</span> Training
+              </p>
             </Reveal>
 
             <Reveal delay={0.12}>
@@ -80,8 +84,8 @@ export default function HomePage() {
               </p>
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <ButtonLink href="/services/boarding">
-                  Explore boarding
+                <ButtonLink href="/membership">
+                  Explore membership
                 </ButtonLink>
 
                 <ButtonLink href="/visit" variant="outline">
@@ -89,10 +93,6 @@ export default function HomePage() {
                 </ButtonLink>
               </div>
 
-              <p className="mt-8 text-xs font-bold uppercase tracking-[.12em] text-muted">
-                Boarding <span className="mx-2 text-leaf">·</span> Grooming{" "}
-                <span className="mx-2 text-leaf">·</span> Training
-              </p>
             </Reveal>
           </div>
 
@@ -101,15 +101,6 @@ export default function HomePage() {
           </Reveal>
         </div>
 
-        <a
-          href="#intro"
-          className="mt-10 inline-flex items-center gap-3 text-[10px] font-extrabold uppercase tracking-[.18em] text-muted"
-        >
-          <span className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/15">
-            <ArrowDown className="h-4 w-4" />
-          </span>
-          Take a walk
-        </a>
       </section>
 
       <TrustMarquee />

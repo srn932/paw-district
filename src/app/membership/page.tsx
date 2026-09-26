@@ -41,7 +41,7 @@ const benefits = [
 
 const steps = [
   ["01", "Choose your fit", "Start with the plan closest to the care your pet uses most."],
-  ["02", "Tell us about them", "We will confirm suitability, current benefits and pricing offers with you."],
+  ["02", "Tell us about them", "We will confirm suitability, plan benefits and the best fit with you."],
   ["03", "Make the District familiar", "Book care as needed and enjoy the benefits included in your active plan."],
 ];
 
@@ -50,6 +50,11 @@ const faqs = [
     question: "Do I need a membership to use Paw District?",
     answer:
       "Not at all. Boarding, grooming and training remain available without membership. Membership is simply for pet parents who want more value and a familiar rhythm across repeat visits.",
+  },
+  {
+    question: "How is membership billed?",
+    answer:
+      "Membership is billed annually at the price shown for your chosen plan. We confirm the included benefits and applicable terms before you join.",
   },
   {
     question: "Does membership guarantee a booking?",
@@ -107,18 +112,12 @@ export default function MembershipPage() {
         </div>
       </section>
 
-      <section className="bg-cream section-pad">
+      <section id="plans" className="scroll-mt-24 bg-cream section-pad">
         <div className="container-shell">
           <Reveal>
-            <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-              <div>
-                <p className="eyebrow">Choose your membership</p>
-                <h2 className="headline">A plan for every kind of regular.</h2>
-              </div>
-              <p className="max-w-md text-sm leading-6 text-muted">
-                Launch pricing is being finalised. Ask us for current pricing,
-                eligibility and the confirmed benefit list before joining.
-              </p>
+            <div>
+              <p className="eyebrow">Choose your membership</p>
+              <h2 className="headline">A plan for every kind of regular.</h2>
             </div>
           </Reveal>
 

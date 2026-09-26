@@ -1,7 +1,7 @@
 export const faqGroups: { category: string; items: { question: string; answer: string }[] }[] = [
   { category: "General", items: [
     { question: "Do I need an appointment?", answer: "Calling or messaging first helps us plan the right team, space and time for your pet. Speak with us for current availability." },
-    { question: "Where is The Paw District?", answer: "You will find us at No. 20/4A1A3, Mappedu Road, Alapakkam - Nedunkundram, Chennai, Tamil Nadu 600063." },
+    { question: "Where is The Paw District?", answer: "You will find us at No. 20, Mappedu Rd, Alappakam, New Perungalathur, Chennai, Nedunkundram, Tamil Nadu 600063." },
     { question: "What vaccinations are required?", answer: "Requirements vary by activity, age and veterinary guidance. We share the current checklist before your pet joins us; your veterinarian should confirm what is appropriate." },
     { question: "What happens if my pet becomes unwell?", answer: "We call you promptly, follow the agreed emergency plan and seek qualified veterinary care when needed." },
   ]},
