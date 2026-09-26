@@ -42,12 +42,11 @@ export default function AboutPage() {
             <h2 className="headline">Care should feel connected.</h2>
           </Reveal>
           <Reveal className="space-y-5 text-2xl font-semibold leading-snug tracking-[-.03em] text-ink/70">
-            <p>Boarding in one place.</p>
-            <p>Grooming in another.</p>
-            <p>Training somewhere else.</p>
+            <p>Knowing their routine.</p>
+            <p>Remembering their preferences.</p>
+            <p>Noticing when something feels different.</p>
             <p className="pt-4 text-ink">
-              Paw District brings these important parts of pet life into one
-              familiar environment.
+              Because better care begins when we know the pet, not just the appointment.
             </p>
           </Reveal>
         </div>
@@ -72,7 +71,7 @@ export default function AboutPage() {
               Individuals, always.
             </h2>
             <div className="body-lg mt-7 space-y-4">
-              <p>Different routines. Different personalities. Different ways of saying “not today.”</p>
+              <p>Different routines. Different personalities. And different ways of caring.”</p>
               <p className="font-bold text-ink">Good care notices the difference.</p>
             </div>
           </Reveal>
