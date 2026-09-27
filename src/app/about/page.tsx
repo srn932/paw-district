@@ -71,7 +71,7 @@ export default function AboutPage() {
               Individuals, always.
             </h2>
             <div className="body-lg mt-7 space-y-4">
-              <p>Different routines. Different personalities. And different ways of caring.”</p>
+              <p>Different routines. Different personalities. And different ways of caring.</p>
               <p className="font-bold text-ink">Good care notices the difference.</p>
             </div>
           </Reveal>
