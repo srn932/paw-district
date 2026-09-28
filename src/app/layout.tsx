@@ -8,6 +8,7 @@ import { WhatsAppButton } from "@/components/common/whatsapp-button";
 import { SEOJsonLd } from "@/components/common/seo-json-ld";
 import { ScrollProgress } from "@/components/motion/scroll-progress";
 import { business } from "@/config/business";
+import { socialImage } from "@/config/seo";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -17,6 +18,22 @@ export const metadata: Metadata = {
   applicationName: "Paw District",
   keywords: ["pet boarding Chennai", "dog boarding", "cat boarding", "pet grooming Chennai", "dog grooming", "cat grooming", "dog training Chennai", "puppy training"],
   robots: { index: true, follow: true },
+  alternates: { canonical: siteConfig.url },
+  openGraph: {
+    title: "Paw District | Modern Pet Care",
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    locale: "en_IN",
+    type: "website",
+    images: [socialImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Paw District | Modern Pet Care",
+    description: siteConfig.description,
+    images: [socialImage],
+  },
   manifest: "/manifest.webmanifest",
   icons: {
     icon: [{ url: "/images/paw-district-mark.webp", type: "image/webp" }],
@@ -60,7 +77,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             name: business.name,
             description: siteConfig.description,
             url: siteConfig.url,
-            image: `${siteConfig.url}/images/paw-district-social.webp`,
+            image: socialImage.url,
             logo: `${siteConfig.url}/images/paw-district-mark.webp`,
             telephone: business.phone,
             email: business.email,

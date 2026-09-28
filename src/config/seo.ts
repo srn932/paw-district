@@ -2,10 +2,13 @@ import type { Metadata } from "next";
 import { business } from "./business";
 import { siteConfig } from "./site";
 
+export const socialImageUrl = new URL("/images/paw-district-social.jpg", siteConfig.url).toString();
+
 export const socialImage = {
-  url: "/images/paw-district-social.webp",
+  url: socialImageUrl,
   width: 1200,
   height: 630,
+  type: "image/jpeg",
   alt: "The Paw District — boarding, grooming and dog training in Chennai",
 };
 
@@ -50,7 +53,7 @@ export function pageMetadata(title: string, description: string, path = ""): Met
       card: "summary_large_image",
       title: resolvedTitle,
       description: resolvedDescription,
-      images: [socialImage.url],
+      images: [socialImage],
     },
   };
 }

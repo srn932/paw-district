@@ -59,7 +59,7 @@ function PlanCard({ plan }: { plan: MembershipPlan }) {
 
   return (
     <motion.article
-      className={`group relative flex h-full flex-col overflow-hidden rounded-[2.25rem] border p-5 shadow-[0_24px_80px_rgba(23,37,31,.08)] sm:p-7 ${featured ? "border-forest bg-forest text-white xl:-my-4" : "border-ink/10 bg-ivory text-ink"}`}
+      className={`group relative flex h-full flex-col overflow-hidden rounded-4xl border p-5 shadow-[0_20px_60px_rgba(23,37,31,.07)] sm:p-7 ${featured ? "border-forest bg-forest text-white xl:-my-3" : "border-ink/10 bg-ivory text-ink"}`}
       style={reduceMotion ? undefined : { rotateX, rotateY, transformPerspective: 1200 }}
       whileHover={reduceMotion ? undefined : { y: -7 }}
       transition={{ type: "spring", stiffness: 240, damping: 24 }}
@@ -80,28 +80,29 @@ function PlanCard({ plan }: { plan: MembershipPlan }) {
         </span>
       ) : null}
 
-      <div className="grid items-center gap-5 sm:grid-cols-[7.5rem_1fr] xl:grid-cols-1 2xl:grid-cols-[7.5rem_1fr]">
-        <div className={`relative aspect-square overflow-hidden rounded-full ${featured ? "bg-white/10" : "bg-cream"}`}>
+      <div className="grid grid-cols-[5.75rem_1fr] items-center gap-4 sm:grid-cols-[7rem_1fr] sm:gap-5 xl:grid-cols-[6.25rem_1fr] 2xl:grid-cols-[7rem_1fr]">
+        <div className={`relative aspect-square overflow-hidden rounded-[1.65rem] ${featured ? "bg-white/10" : "bg-cream"}`}>
           <Image
             src={plan.image}
             alt={plan.imageAlt}
             fill
-            sizes="120px"
+            sizes="(max-width: 640px) 92px, 112px"
             style={{ objectPosition: plan.imagePosition }}
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+            quality={90}
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
         </div>
-        <div className={featured ? "pr-20 sm:pr-0 xl:pr-20 2xl:pr-0" : ""}>
-          <p className={`text-[9px] font-extrabold uppercase tracking-[.18em] ${featured ? "text-mint" : "text-forest"}`}>
+        <div className={featured ? "pt-8 sm:pt-0 xl:pt-8 2xl:pt-0" : ""}>
+          <p className={`text-[10px] font-extrabold uppercase tracking-[.2em] ${featured ? "text-mint" : "text-forest"}`}>
             {plan.tier} membership
           </p>
-          <h3 className="mt-2 text-2xl font-extrabold tracking-[-.04em]">{plan.name}</h3>
-          <p className={`mt-3 text-sm leading-6 ${featured ? "text-white/70" : "text-muted"}`}>{plan.description}</p>
+          <h3 className="mt-2 text-[1.7rem] font-bold leading-none tracking-[-.045em]">{plan.name}</h3>
+          <p className={`mt-3 text-[15px] leading-6 ${featured ? "text-white/72" : "text-muted"}`}>{plan.description}</p>
         </div>
       </div>
 
       <div className="mt-7 flex items-end gap-2">
-        <span className="text-[2.7rem] font-extrabold leading-none tracking-[-.065em] sm:text-5xl">{plan.price}</span>
+        <span className="text-[2.85rem] font-extrabold leading-none tracking-[-.065em] sm:text-[3.25rem]">{plan.price}</span>
         <span className={`pb-1 text-sm ${featured ? "text-white/60" : "text-muted"}`}>{plan.cadence}</span>
       </div>
 
@@ -115,7 +116,7 @@ function PlanCard({ plan }: { plan: MembershipPlan }) {
               </span>
               <span>
                 <span className="block text-sm font-bold leading-5">{highlight.title}</span>
-                <span className={`mt-0.5 block text-[11px] leading-4 ${featured ? "text-white/55" : "text-muted"}`}>{highlight.detail}</span>
+                <span className={`mt-1 block text-xs leading-5 ${featured ? "text-white/60" : "text-muted"}`}>{highlight.detail}</span>
               </span>
             </motion.div>
           );
@@ -126,7 +127,7 @@ function PlanCard({ plan }: { plan: MembershipPlan }) {
         {plan.benefits.map(([icon, benefit]) => {
           const Icon = icons[icon];
           return (
-            <li key={benefit} className="grid grid-cols-[1rem_1.25rem_1fr] items-start gap-2.5 text-sm leading-5">
+            <li key={benefit} className="grid grid-cols-[1rem_1.25rem_1fr] items-start gap-2.5 text-[15px] leading-6">
               <Check className={`mt-0.5 h-4 w-4 ${featured ? "text-sun" : "text-forest"}`} aria-hidden="true" />
               <Icon className={`mt-0.5 h-4 w-4 ${featured ? "text-mint" : "text-forest"}`} aria-hidden="true" />
               <span>{benefit}</span>
@@ -151,8 +152,8 @@ export function MembershipPlans() {
         <Reveal>
           <div className="mx-auto max-w-4xl text-center">
             <p className="eyebrow">The Paw District membership</p>
-            <h2 className="headline pretty-balance">A year of care, just for them.</h2>
-            <p className="body-lg mx-auto mt-5 max-w-3xl">
+            <h2 className="headline mx-auto max-w-3xl pretty-balance">A year of care, just for them.</h2>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted">
               Exclusive benefits, meaningful savings and a closer bond—with grooming,
               boarding and training plans shaped around the care they use most.
             </p>
@@ -171,9 +172,9 @@ export function MembershipPlans() {
           <div className="mt-8 overflow-hidden rounded-[2rem] border border-ink/10 bg-ivory p-5 shadow-[0_20px_60px_rgba(23,37,31,.05)] sm:p-7">
             <div className="grid gap-6 lg:grid-cols-[.75fr_2.25fr] lg:items-center">
               <div>
-                <p className="text-[10px] font-extrabold uppercase tracking-[.18em] text-forest">Included in Training Club</p>
-                <h3 className="mt-2 text-2xl font-bold tracking-[-.04em]">Basic Training Programme</h3>
-                <p className="mt-2 text-sm leading-6 text-muted">A structured foundation programme to build good habits, confidence and better everyday behaviour.</p>
+                <p className="text-[11px] font-extrabold uppercase tracking-[.2em] text-forest">Included in Training Club</p>
+                <h3 className="mt-3 text-[1.7rem] font-bold leading-tight tracking-[-.04em]">Basic Training Programme</h3>
+                <p className="mt-3 text-[15px] leading-6 text-muted">A structured foundation programme to build good habits, confidence and better everyday behaviour.</p>
               </div>
               <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
                 {trainingProgramme.map((step) => {
@@ -184,8 +185,8 @@ export function MembershipPlans() {
                         <span className="flex h-7 w-7 items-center justify-center rounded-full bg-sun/60 text-[10px] font-extrabold">{step.number}</span>
                         <Icon className="h-5 w-5 text-forest transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110" aria-hidden="true" />
                       </div>
-                      <p className="mt-5 text-sm font-bold">{step.title}</p>
-                      <p className="mt-1 text-xs leading-5 text-muted">{step.copy}</p>
+                      <p className="mt-5 text-[15px] font-bold leading-5">{step.title}</p>
+                      <p className="mt-2 text-[13px] leading-5 text-muted">{step.copy}</p>
                     </motion.div>
                   );
                 })}
@@ -201,12 +202,12 @@ export function MembershipPlans() {
               return (
                 <div key={item.title} className="flex items-center gap-3 bg-ivory p-4">
                   <Icon className="h-6 w-6 shrink-0 text-forest" aria-hidden="true" />
-                  <span><span className="block text-xs font-bold">{item.title}</span><span className="mt-0.5 block text-[10px] text-muted">{item.copy}</span></span>
+                  <span><span className="block text-sm font-bold">{item.title}</span><span className="mt-1 block text-xs leading-5 text-muted">{item.copy}</span></span>
                 </div>
               );
             })}
           </div>
-          <div className="mt-5 border-t border-ink/10 pt-4 text-[10px] leading-5 text-muted">
+          <div className="mt-5 border-t border-ink/10 pt-4 text-[11px] leading-5 text-muted">
             <span className="mr-2 font-extrabold uppercase tracking-[.12em] text-ink">Terms & conditions</span>
             {membershipTerms.map((term, index) => <span key={term}>{index ? " · " : ""}{term}</span>)}
           </div>
