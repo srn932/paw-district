@@ -1,7 +1,6 @@
 import {
   BadgePercent,
   CalendarCheck2,
-  Check,
   Gift,
   HeartHandshake,
   PawPrint,
@@ -12,8 +11,8 @@ import { FAQAccordion } from "@/components/common/faq-accordion";
 import { PageHero } from "@/components/common/page-hero";
 import { Reveal } from "@/components/motion/reveal";
 import { CTASection } from "@/components/sections/cta-section";
+import { MembershipPlans } from "@/components/sections/membership-plans";
 import { pageMetadata } from "@/config/seo";
-import { membershipPlans } from "@/data/membership";
 
 export const metadata = pageMetadata(
   "Pet Care Membership Chennai | Paw District",
@@ -112,54 +111,7 @@ export default function MembershipPage() {
         </div>
       </section>
 
-      <section id="plans" className="scroll-mt-24 bg-cream section-pad">
-        <div className="container-shell">
-          <Reveal>
-            <div>
-              <p className="eyebrow">Choose your membership</p>
-              <h2 className="headline">A plan for every kind of regular.</h2>
-            </div>
-          </Reveal>
-
-          <div className="mt-14 grid gap-6 lg:grid-cols-3">
-            {membershipPlans.map((plan, index) => (
-              <Reveal
-                key={plan.name}
-                delay={index * 0.07}
-                className={`relative flex flex-col rounded-5xl border p-7 md:p-9 ${plan.featured ? "border-forest bg-forest text-white shadow-soft" : "border-ink/10 bg-ivory"}`}
-              >
-                {plan.featured ? (
-                  <span className="absolute right-6 top-6 rounded-full bg-sun px-3 py-1 text-[9px] font-extrabold uppercase tracking-widest text-ink">
-                    Most popular
-                  </span>
-                ) : null}
-                <p className={`text-[10px] font-extrabold uppercase tracking-[.18em] ${plan.featured ? "text-mint" : "text-forest"}`}>
-                  {plan.eyebrow}
-                </p>
-                <h3 className="mt-4 text-3xl font-bold tracking-[-.05em]">{plan.name}</h3>
-                <div className="mt-8 flex items-end gap-2">
-                  <span className="text-5xl font-extrabold tracking-[-.06em]">{plan.price}</span>
-                  <span className={`pb-1 text-sm ${plan.featured ? "text-white/60" : "text-muted"}`}>{plan.cadence}</span>
-                </div>
-                <p className={`mt-5 leading-7 ${plan.featured ? "text-white/70" : "text-muted"}`}>
-                  {plan.description}
-                </p>
-                <ul className={`my-8 space-y-4 border-y py-8 ${plan.featured ? "border-white/15" : "border-ink/10"}`}>
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex gap-3 text-sm font-semibold">
-                      <Check className={`mt-0.5 h-4 w-4 shrink-0 ${plan.featured ? "text-sun" : "text-forest"}`} aria-hidden="true" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <ButtonLink href="/visit" variant={plan.featured ? "light" : "primary"} className="mt-auto">
-                  Ask about {plan.name}
-                </ButtonLink>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <MembershipPlans />
 
       <section className="container-shell section-pad">
         <div className="grid gap-12 lg:grid-cols-[.7fr_1.3fr]">
