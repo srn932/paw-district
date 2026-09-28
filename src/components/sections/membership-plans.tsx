@@ -80,16 +80,16 @@ function PlanCard({ plan }: { plan: MembershipPlan }) {
         </span>
       ) : null}
 
-      <div className="grid grid-cols-[5.75rem_1fr] items-center gap-4 sm:grid-cols-[7rem_1fr] sm:gap-5 xl:grid-cols-[6.25rem_1fr] 2xl:grid-cols-[7rem_1fr]">
-        <div className={`relative aspect-square overflow-hidden rounded-[1.65rem] ${featured ? "bg-white/10" : "bg-cream"}`}>
+      <div className="grid grid-cols-[6.25rem_1fr] items-center gap-4 sm:grid-cols-[7.5rem_1fr] sm:gap-5 xl:grid-cols-[8rem_1fr] 2xl:grid-cols-[9rem_1fr]">
+        <div className="relative aspect-square">
+          <span aria-hidden="true" className={`absolute inset-x-[7%] top-[7%] aspect-square rounded-full ${featured ? "bg-white/15" : "bg-[#e8e9df]"}`} />
+          <span aria-hidden="true" className={`absolute right-[2%] top-[72%] h-3.5 w-3.5 rounded-full ${featured ? "bg-white/15" : "bg-[#d9dccd]"}`} />
           <Image
             src={plan.image}
             alt={plan.imageAlt}
             fill
-            sizes="(max-width: 640px) 92px, 112px"
-            style={{ objectPosition: plan.imagePosition }}
-            quality={90}
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            sizes="(max-width: 640px) 100px, (max-width: 1280px) 120px, (max-width: 1536px) 128px, 144px"
+            className="relative z-10 object-contain object-bottom transition-transform duration-700 ease-out group-hover:scale-105"
           />
         </div>
         <div className={featured ? "pt-8 sm:pt-0 xl:pt-8 2xl:pt-0" : ""}>
